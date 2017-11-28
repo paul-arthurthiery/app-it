@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head>
+
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -79,8 +83,9 @@
     margin-top: 10px;
 }
 </style>
+</head>
 
-
+<body>
 <div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -97,6 +102,12 @@
                 <a href="#" class="pull-right need-help">Besoin d'aide ? </a><span class="clearfix"></span>
                 </form>
             </div>
+            <br/>
+                <?php echo($erreur);?>
+            </div>
         </div>
     </div>
 </div>
+</body>
+
+</html>
