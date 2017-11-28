@@ -4,7 +4,11 @@
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<!-- Jquery JS CDN -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
 <style>
 .form-signin
@@ -109,5 +113,24 @@
     </div>
 </div>
 </body>
+
+<!-- Animation message erreur -->
+<script>
+jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+    this.each(function() {
+        $(this).css("position","relative");
+        for (var x=1; x<=intShakes; x++) {
+        $(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+    .animate({left:intDistance}, ((intDuration/intShakes)/2))
+    .animate({left:0}, (((intDuration/intShakes)/4)));
+    }
+  });
+return this;
+};
+
+$("#shaker").ready(function(){
+	$("#shaker").shake(3,7,800);
+});
+</script>
 
 </html>
