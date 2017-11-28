@@ -29,11 +29,12 @@
                 <ul class="list-unstyled components">
                     <p>SmartPanel</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Appartements</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Navigation</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="#">Home 1</a></li>
-                            <li><a href="#">Home 2</a></li>
-                            <li><a href="#">Home 3</a></li>
+                            <li><a href="/index.php?cible=accueil">Accueil</a></li>
+                            <li><a href="/index.php?cible=etape1">Etape 1</a></li>
+                            <li><a href="/index.php?cible=etape2">Etape 2</a></li>
+                            <li><a href="/index.php?cible=etape3">Etape 3</a></li>
                         </ul>
                     </li>
                     <li>
@@ -82,9 +83,6 @@
                         </div>
                     </div>
                 </nav>
-                <div id="menu">
-                    <?php echo($menu); ?>
-                </div>
                 <div id="contenu">
                     <?php echo($contenu); ?>
                 </div>
