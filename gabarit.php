@@ -55,7 +55,7 @@
                 </ul>
 
                 <ul class="list-unstyled CTAs">
-                    <li><a href="/index.php?cible=deconnexion" class="article">Déconnexion</a></li>
+                    <li><a href="index.php?cible=deconnexion" class="article">Déconnexion</a></li>
                 </ul>
             </nav>
 
