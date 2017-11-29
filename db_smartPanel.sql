@@ -1,128 +1,121 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Nov 29, 2017 at 03:57 PM
--- Server version: 5.6.35
--- PHP Version: 7.1.8
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 29, 2017 at 03:51 PM
+-- Server version: 5.7.19
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `smartPanel`
+-- Database: `smartpanel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Appartment`
+-- Table structure for table `appartment`
 --
 
-CREATE TABLE `Appartment` (
+DROP TABLE IF EXISTS `appartment`;
+CREATE TABLE IF NOT EXISTS `appartment` (
   `ApptId` int(11) NOT NULL,
   `Address` varchar(255) NOT NULL,
   `NumberRooms` tinyint(4) NOT NULL,
-  `User_Id` int(11) NOT NULL
+  `User_Id` int(11) NOT NULL,
+  PRIMARY KEY (`ApptId`),
+  KEY `fk_UserID` (`User_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Room`
+-- Table structure for table `room`
 --
 
-CREATE TABLE `Room` (
+DROP TABLE IF EXISTS `room`;
+CREATE TABLE IF NOT EXISTS `room` (
   `RoomID` tinyint(4) NOT NULL,
   `ApartmentID` int(11) NOT NULL,
-  `Name` varchar(50) NOT NULL
+  `Name` varchar(50) NOT NULL,
+  PRIMARY KEY (`RoomID`),
+  KEY `fk_ApartmentID` (`ApartmentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Sensor`
+-- Table structure for table `sensor`
 --
 
-CREATE TABLE `Sensor` (
+DROP TABLE IF EXISTS `sensor`;
+CREATE TABLE IF NOT EXISTS `sensor` (
   `SensorID` tinyint(4) NOT NULL,
   `Type` varchar(50) NOT NULL,
   `Value` varchar(20) NOT NULL,
   `RoomID` tinyint(4) NOT NULL,
-  `IsActuator` tinyint(1) NOT NULL
+  `IsActuator` tinyint(1) NOT NULL,
+  PRIMARY KEY (`SensorID`),
+  KEY `fk_RoomID` (`RoomID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `User`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `User` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
   `User_Id` int(11) NOT NULL,
   `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
+  `Password` varchar(32) NOT NULL,
   `FullName` varchar(50) NOT NULL,
-  `IsAdmin` tinyint(1) NOT NULL
+  `IsAdmin` tinyint(1) NOT NULL,
+  PRIMARY KEY (`User_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `User`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `User` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VALUES
-(123456789, 'Jean-mich', 'root', 'Jean-Michel', 1);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `Appartment`
---
-ALTER TABLE `Appartment`
-  ADD PRIMARY KEY (`ApptId`),
-  ADD KEY `fk_UserID` (`User_Id`);
-
---
--- Indexes for table `Room`
---
-ALTER TABLE `Room`
-  ADD PRIMARY KEY (`RoomID`),
-  ADD KEY `fk_ApartmentID` (`ApartmentID`);
-
---
--- Indexes for table `Sensor`
---
-ALTER TABLE `Sensor`
-  ADD PRIMARY KEY (`SensorID`),
-  ADD KEY `fk_RoomID` (`RoomID`);
-
---
--- Indexes for table `User`
---
-ALTER TABLE `User`
-  ADD PRIMARY KEY (`User_Id`);
+INSERT INTO `user` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VALUES
+(123456789, 'Jean-mich', '63a9f0ea7bb98050796b649e85481845', 'Jean-Michel', 1);
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `Appartment`
+-- Constraints for table `appartment`
 --
-ALTER TABLE `Appartment`
-  ADD CONSTRAINT `fk_UserID` FOREIGN KEY (`User_Id`) REFERENCES `User` (`User_Id`);
+ALTER TABLE `appartment`
+  ADD CONSTRAINT `fk_UserID` FOREIGN KEY (`User_Id`) REFERENCES `user` (`User_Id`);
 
 --
--- Constraints for table `Room`
+-- Constraints for table `room`
 --
-ALTER TABLE `Room`
-  ADD CONSTRAINT `fk_ApartmentID` FOREIGN KEY (`ApartmentID`) REFERENCES `Appartment` (`ApptId`);
+ALTER TABLE `room`
+  ADD CONSTRAINT `fk_ApartmentID` FOREIGN KEY (`ApartmentID`) REFERENCES `appartment` (`ApptId`);
 
 --
--- Constraints for table `Sensor`
+-- Constraints for table `sensor`
 --
-ALTER TABLE `Sensor`
-  ADD CONSTRAINT `fk_RoomID` FOREIGN KEY (`RoomID`) REFERENCES `Room` (`RoomID`);
+ALTER TABLE `sensor`
+  ADD CONSTRAINT `fk_RoomID` FOREIGN KEY (`RoomID`) REFERENCES `room` (`RoomID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

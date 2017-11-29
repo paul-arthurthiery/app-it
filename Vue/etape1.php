@@ -6,10 +6,10 @@
     $contenu .= "Liste des utilisateurs";
     $contenu .= "<ul>";
     while($ligne = $reponse->fetch()){
-        $contenu .= "<li>".$ligne['identifiant']."</li>";
+        $contenu .= "<li>".$ligne['Username']."</li>";
     }
     $contenu .= "</ul>";
-    
+
     $pied = pied();
 
     include 'gabarit.php';

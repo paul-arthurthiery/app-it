@@ -1,5 +1,5 @@
 <?php
-    $dbname = "APP-MVC";
+    $dbname = "smartpanel";
     $host='localhost';
     $user='root';
     $pass='root';
