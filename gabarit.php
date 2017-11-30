@@ -50,7 +50,7 @@
                         <a href="#">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">About</a>
                     </li>
                 </ul>
 
