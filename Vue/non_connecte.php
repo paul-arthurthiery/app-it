@@ -107,10 +107,9 @@
                 </form>
             </div>
             <br/>
-                <?php if (!empty($erreur)) {
-                  echo($erreur);
-                }?>
-            </div>
+            <?php if (!empty($erreur)) {
+              echo($erreur);
+            }?>
         </div>
     </div>
 </div>

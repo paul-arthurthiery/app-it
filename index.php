@@ -6,6 +6,7 @@
     if(!isset($_SESSION["userID"])){ // L'utilisateur n'est pas connecté
         include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
     } else { // L'utilisateur est connecté
+        include("Controleur/new_appartment.php");
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
             if($_GET['cible'] == 'accueil'){
                 include("Vue/accueil.php");
