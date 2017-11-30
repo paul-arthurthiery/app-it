@@ -50,7 +50,7 @@
                         <a href="#">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="index.php?cible=about">About</a>
                     </li>
                 </ul>
 
