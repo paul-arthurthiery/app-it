@@ -17,8 +17,14 @@
                     $erreur = "Mot de passe incorrect";
                     include("Vue/connexion_erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil
+                  $reponse = appt($db,$_POST['identifiant']);
                     $_SESSION["userID"] = $ligne['Username'];
-                    include("Vue/accueil.php");
+                    if($reponse->rowcount()==0) {
+                      include("Vue/create_appartment.php");
+                      }
+                    else {
+                      include("Vue/accueil.php");
+                    }
                 }
             }
         } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
