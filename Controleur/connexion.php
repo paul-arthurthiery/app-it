@@ -17,9 +17,9 @@
                     $erreur = "Mot de passe incorrect";
                     include("Vue/connexion_erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil
-                  $reponse = appt($db,$_POST['identifiant']);
+                  $reponse_appt = appt($db,$_POST['identifiant']);
                     $_SESSION["userID"] = $ligne['Username'];
-                    if($reponse->rowcount()==0) {
+                    if($reponse_appt->rowcount()==0) {
                       include("Vue/create_appartment.php");
                       }
                     else {
