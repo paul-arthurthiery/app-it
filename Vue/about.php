@@ -3,17 +3,25 @@
 $contenu = '
 
 
+<
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-		<style>
-		h1 {
+  
+    <style>
+    img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+    h1 {
     text-align: center;
 }
-		h2 {
+    h2 {
     text-align: center;
 }
 * {
@@ -55,7 +63,7 @@ body {
 
 /* Create three equal columns that floats next to each other */
 .column {
-    float: left;
+    float: right;
     width: 33.33%;
     padding: 15px;
 }
@@ -73,51 +81,57 @@ body {
         width: 100%;
     }
 }
-		</style>
+    </style>
 
-	</head>
+  </head>
 
 
-	<body>
+  <body>
 
-	<h1 class="titre" >About us </h1>
-	<p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre 
+  <h1 class="titre" >About us</h1>
+  <p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre 
 
-	</p>
-	<p>other stuff to say in an another paragraph 
-	
-	</p>
-	
+  </p>
+  <p>other stuff to say in an another paragraph 
+  
+  </p>
+  
 
-	<hr>
+  <hr>
 
-	<h2 >The team</h2>
-	<p>This is a paragraph.so if i just rwigth stuff like that </p>
-	<p>other stuff to say in an another paragraph </p>
-	
+  <h2 >The team</h2>
+  <p>This is a paragraph.so if i just rwigth stuff like that </p>
+  <p>other stuff to say in an another paragraph </p>
+  
 
 <div class="row">
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
+    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
@@ -125,9 +139,8 @@ body {
 
 
 
-	</body>
+  </body>
 </html>
-
 
 ';
 
