@@ -8,6 +8,15 @@
         <title>
            <?php echo($titre); ?>
         </title>
+        <style type="text/css">
+        ul li {list-style-type: none; }
+        .nav li{ line-height:20px; float:left; padding:0 5px; font-size: 23px;} 
+        .nav ul li a {display: block; width: 100%; background: #FFF}
+        .nav li a:hover{ color:#F00} 
+        .ul{ padding:0; margin:0;list-style:none} 
+        .bg{margin: 25px; margin-bottom: 0px;}
+            
+        </style>
 
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,6 +24,7 @@
         <link rel="stylesheet" href="css/structure.css">
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        }
 
     </head>
     <body>
@@ -27,7 +37,7 @@
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>SmartPanel</p>
+                    <p><font size="6">SmartPanel</font></p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Navigation</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -74,10 +84,14 @@
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Page</a></li>
-                                <li><a href="#">Page</a></li>
-                                <li><a href="#">Page</a></li>
-                                <li><a href="#">Page</a></li>
+                                <nav class="bg">
+                                    <ul>
+                                        <li><a href="index.php?cible=Page1_right">Page1</a></li>
+                                        <li><a href="#">Page2</a></li>
+                                        <li><a href="#">Page3</a></li>
+                                        <li><a href="#">Page4</a></li>
+                                    </ul>                                  
+                                </nav>                             
                             </ul>
                         </div>
                     </div>
