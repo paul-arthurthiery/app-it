@@ -3,13 +3,13 @@
 $contenu = '
 
 
-<
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <style>
     img {
     border-radius: 50%;
@@ -89,20 +89,20 @@ body {
   <body>
 
   <h1 class="titre" >About us</h1>
-  <p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre 
+  <p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre
 
   </p>
-  <p>other stuff to say in an another paragraph 
-  
+  <p>other stuff to say in an another paragraph
+
   </p>
-  
+
 
   <hr>
 
   <h2 >The team</h2>
   <p>This is a paragraph.so if i just rwigth stuff like that </p>
   <p>other stuff to say in an another paragraph </p>
-  
+
 
 <div class="row">
   <div class="column">
