@@ -1,5 +1,4 @@
-<?php
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -24,4 +23,7 @@
 		    echo($erreur);
 		}?>
 	</body>
+	<?php
+		include("Controleur/new_appartment.php");
+	?>
 </html>
