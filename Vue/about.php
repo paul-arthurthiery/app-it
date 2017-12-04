@@ -3,14 +3,77 @@
 $contenu = '
 
 
-success
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<style>
+		h1 {
+    text-align: center;
+}
+		h2 {
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+}
 
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
 
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
 
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+		</style>
 
 	</head>
 
@@ -18,31 +81,49 @@ success
 	<body>
 
 	<h1 class="titre" >About us </h1>
-	<p>This is a paragraph.so if i just rwigth stuff like that verry verry long <br> so we break line bishy bishy <br> 
-	<img src="doggo.gif" alt="dog on tutle" style="width:150px;height:149px;">
+	<p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre 
 
 	</p>
 	<p>other stuff to say in an another paragraph 
-	<a href="https://www.w3schools.com">This is a link</a>
-	and continue  </p>
-	<a href="https://www.w3schools.com">This is a link</a>
+	
+	</p>
+	
 
 	<hr>
 
-	<h2 id="dog-smilling">This is a Heading</h2>
+	<h2 >The team</h2>
 	<p>This is a paragraph.so if i just rwigth stuff like that </p>
 	<p>other stuff to say in an another paragraph </p>
-	<img src="dog.jpg" alt="this is dog" width="200" height="200">
+	
 
-	<hr>
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
 
-	<h3 class="titre">I am dog </h3>
-	<p style="color:blue">I am a paragraph</p>
-	<p>This is a paragraph.so if i just rwigth stuff like that<br>
-	<iframe width="420" height="315"
-src="https://www.youtube.com/embed/O6P2_i0Y6ms">
-</iframe> </p>
-	<p>other stuff to say in an another paragraph </p>
+
 
 	</body>
 </html>
