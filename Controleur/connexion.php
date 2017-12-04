@@ -7,6 +7,8 @@
 
 
             $reponse = mdp($db,$_POST['identifiant']);
+            $getUID = getUID($db,$_POST['identifiant']);
+
 
             if($reponse->rowcount()==0){  // L'utilisateur n'a pas été trouvé dans la base de données
                 $erreur = "Utilisateur inconnu";
@@ -18,8 +20,9 @@
                     include("Vue/connexion_erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil
                   $reponse_appt = appt($db,$_POST['identifiant']);
-                  $UID = $reponse_appt->fetch();
-                  $_SESSION["User_Id"] = $UID['User_Id'];
+
+                  $UID = $getUID->fetch();
+                  $_SESSION['User_Id'] = $UID['User_Id'];
                     if($reponse_appt->rowcount()==0) {
                       include("Vue/create_appartment.php");
                       }

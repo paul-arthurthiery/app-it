@@ -3,7 +3,7 @@
     require("Modele/connexion.php");
     require("Vue/commun.php");
 
-    if(!isset($_SESSION["userID"])){ // L'utilisateur n'est pas connecté
+    if(!isset($_SESSION["User_Id"])){ // L'utilisateur n'est pas connecté
         include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
     } else { // L'utilisateur est connecté
         include("Controleur/new_appartment.php");

@@ -19,5 +19,10 @@
         return $reponse;
     }
 
+    function getUID($db,$identifiant){
+      $reponse = $db->query('SELECT User_Id FROM user WHERE Username="'.$identifiant.'"');
+      return $reponse;
+    }
+
 
 ?>
