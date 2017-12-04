@@ -86,10 +86,10 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <nav class="bg">
                                     <ul>
-                                        <li><a href="index.php?cible=Page1_right">Page1</a></li>
-                                        <li><a href="#">Page2</a></li>
-                                        <li><a href="#">Page3</a></li>
-                                        <li><a href="#">Page4</a></li>
+                                        <li><a href="index.php?cible=Page1">Page1</a></li>
+                                        <li><a href="index.php?cible=Page2">Page2</a></li>
+                                        <li><a href="index.php?cible=Page3">Page3</a></li>
+                                        <li><a href="index.php?cible=Page4">Page4</a></li>
                                     </ul>                                  
                                 </nav>                             
                             </ul>

@@ -19,7 +19,15 @@
                 include("Vue/etape3.php");
             } else if ($_GET['cible'] == "about"){
                 include("Vue/about.php");
-           } else if ($_GET['cible'] == "deconnexion"){
+            } else if ($_GET['cible'] == "Page1"){
+                include("Vue/Page1.php");
+            } else if ($_GET['cible'] == "Page2"){
+                include("Vue/Page2.php");
+            } else if ($_GET['cible'] == "Page3"){
+                include("Vue/Page3.php");
+            } else if ($_GET['cible'] == "Page4"){
+                include("Vue/Page4.php");
+            } else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
                 $_SESSION = array();
                 if (isset($_COOKIE[session_name()])) {
