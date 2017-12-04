@@ -13,7 +13,7 @@
 		<title>Create Appartment page</title>
 	</head>
 	<body>
-		<form action="index.php?cible=createapt" method="get" accept-charset="utf-8">
+		<form action="index.php?cible=createapt" method="POST" accept-charset="utf-8">
 			Nom: <input type="text" name="name">
 			Address: <input type="text" name="address">
 			Nombre de pièces: <input type="number" name="nbrRooms">
@@ -21,7 +21,7 @@
 		</form>
 		<br/>
 		<?php if (!empty($erreur)) {
-		  echo($erreur);
-		}?>	
+		    echo($erreur);
+		}?>
 	</body>
 </html>
