@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 30, 2017 at 04:52 PM
--- Server version: 5.6.28
--- PHP Version: 7.0.10
+-- Generation Time: Dec 04, 2017 at 10:24 AM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -13,6 +13,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `smartpanel`
 --
+CREATE DATABASE IF NOT EXISTS `smartpanel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `smartpanel`;
 
 -- --------------------------------------------------------
 
@@ -20,6 +22,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `appartment`
 --
 
+DROP TABLE IF EXISTS `appartment`;
 CREATE TABLE `appartment` (
   `Name` varchar(20) NOT NULL,
   `ApptId` int(11) NOT NULL,
@@ -28,12 +31,21 @@ CREATE TABLE `appartment` (
   `User_Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `appartment`
+--
+
+INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`) VALUES
+('Apt de michel', 1, '1 rue de Paris', 3, 123456789),
+('Apt de john', 2, '2 rue des Pins', 4, 2);
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `room`
 --
 
+DROP TABLE IF EXISTS `room`;
 CREATE TABLE `room` (
   `RoomID` tinyint(4) NOT NULL,
   `ApartmentID` int(11) NOT NULL,
@@ -46,6 +58,7 @@ CREATE TABLE `room` (
 -- Table structure for table `sensor`
 --
 
+DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE `sensor` (
   `SensorID` tinyint(4) NOT NULL,
   `Type` varchar(50) NOT NULL,
@@ -60,6 +73,7 @@ CREATE TABLE `sensor` (
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `User_Id` int(11) NOT NULL,
   `Username` varchar(20) NOT NULL,
@@ -73,6 +87,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VALUES
+(2, 'jony', '63a9f0ea7bb98050796b649e85481845', 'John Doe', 0),
+(3, 'alexis', '63a9f0ea7bb98050796b649e85481845', 'Alexis', 0),
 (123456789, 'Jean-mich', '63a9f0ea7bb98050796b649e85481845', 'Jean-Michel', 1);
 
 -- --------------------------------------------------------
@@ -81,6 +97,7 @@ INSERT INTO `user` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VA
 -- Table structure for table `utilisateurs`
 --
 
+DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE `utilisateurs` (
   `id` int(11) NOT NULL,
   `identifiant` text COLLATE utf8_unicode_ci NOT NULL,
