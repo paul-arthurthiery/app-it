@@ -18,7 +18,8 @@
                     include("Vue/connexion_erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil
                   $reponse_appt = appt($db,$_POST['identifiant']);
-                    $_SESSION["userID"] = $ligne['Username'];
+                  $UID = $reponse_appt->fetch();
+                  $_SESSION["User_Id"] = $UID['User_Id'];
                     if($reponse_appt->rowcount()==0) {
                       include("Vue/create_appartment.php");
                       }
