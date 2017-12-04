@@ -10,12 +10,12 @@
         </title>
         <style type="text/css">
         ul li {list-style-type: none; }
-        .nav li{ line-height:20px; float:left; padding:0 5px; font-size: 23px;} 
+        .nav li{ line-height:20px; float:left; padding:0 5px; font-size: 23px;}
         .nav ul li a {display: block; width: 100%; background: #FFF}
-        .nav li a:hover{ color:#F00} 
-        .ul{ padding:0; margin:0;list-style:none} 
+        .nav li a:hover{ color:#F00}
+        .ul{ padding:0; margin:0;list-style:none}
         .bg{margin: 25px; margin-bottom: 0px;}
-            
+
         </style>
 
         <!-- Bootstrap CSS CDN -->
@@ -48,12 +48,14 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="index.php?cible=Myprofile">My Profile</a>
+
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="#">Page 1</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li><a href="index.php?cible=Page1">Page 1</a></li>
+                            <li><a href="index.php?cible=Page2">Page 2</a></li>
+                            <li><a href="index.php?cible=Page3">Page 3</a></li>
+                            <li><a href="index.php?cible=Page4">Page 4</a></li>
                         </ul>
                     </li>
                     <li>
@@ -90,8 +92,8 @@
                                         <li><a href="index.php?cible=Page2">Page2</a></li>
                                         <li><a href="index.php?cible=Page3">Page3</a></li>
                                         <li><a href="index.php?cible=Page4">Page4</a></li>
-                                    </ul>                                  
-                                </nav>                             
+                                    </ul>
+                                </nav>
                             </ul>
                         </div>
                     </div>
