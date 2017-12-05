@@ -6,11 +6,6 @@ $contenu = '
 
 
 
-';
-
-include('gabarit.php')
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -20,27 +15,66 @@ include('gabarit.php')
 	<style type="text/css">
 
 
-		
+
 	</style>
+
+
 </head>
+
 <body>
-	<h1 class="h1"> My Profile</h1>
+	<h1 class="h1"> Mon Profile</h1>
 	<hr/>
 	<div class="container">
 		<div class="profiles">
-			<form>
-			    <font size="4">First Name :</font><input type="text" name="firstname"  value="1" readonly="true"> <br/>
-                <font size="4">Last Name : </font> <input type="text" name="lastname" value="2" readonly="true"> <br/>
-                <font size="4">User ID : </font><input type="text" name="userid" value="3" readonly="true"> 
-                <font size="4">Appartment ID :</font><input type="text" name="appid" value="4" readonly="true"> <br/>
-                <font size="4">Address : </font><input type="text" name="address" value="5" readonly="true"> 
-                <font size="4">Postal code : </font><input type="text" name="code" value="6" readonly="true">			
-			</form>
-           
 
-			
+
+			<form>
+		     <div class="form-group">
+		       <label for="usr">Nom:</label>
+		       <input type="text" class="form-control" name="Nom" value="1"readonly="true">
+		     </div>
+				 <div class="form-group">
+		       <label for="usr">Prénom:</label>
+		       <input type="text" class="form-control" name="Prénom" value="1"readonly="true">
+		     </div>
+				 <div class="form-group">
+					<label for="usr">Email:</label>
+					<input type="text" class="form-control" name="Email" value="1"readonly="true">
+				</div>
+				 <div class="form-group">
+		       <label for="usr">Utilisateur ID:</label>
+		       <input type="text" class="form-control" name="ID" value="1"readonly="true">
+		     </div>
+				 <div class="form-group">
+		       <label for="usr">Appartement ID :</label>
+		       <input type="text" class="form-control" name="APP" value="1"readonly="true">
+		     </div>
+				 <div class="form-group">
+		       <label for="usr">Code Postale:</label>
+		       <input type="text" class="form-control" name="Post" value="1"readonly="true">
+		     </div>
+
+		   </form>
+
+
 		</div>
 	</div>
 
+
+
+<hr/>
+
+
+
+  <button type="button" class="btn btn-primary">Gére</button>
+	<button type="button" class="btn btn-primary">Retour</button
+
 </body>
+
 </html>
+
+';
+
+include('gabarit.php')
+
+?>
