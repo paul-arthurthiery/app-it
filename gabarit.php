@@ -62,7 +62,7 @@
                         <a href="index.php?cible=nouscontacter">Nous contacter</a>
                     </li>
                     <li>
-                        <a href="index.php?cible=about">About</a>
+                        <a href="index.php?cible=about">À propos </a>
                     </li>
                 </ul>
 
