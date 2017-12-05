@@ -59,7 +59,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a href="index.php?cible=nouscontacter">Nous contacter</a>
                     </li>
                     <li>
                         <a href="index.php?cible=about">About</a>
