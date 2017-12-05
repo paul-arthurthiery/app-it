@@ -24,6 +24,8 @@
                   include("Vue/nous_contacter.php");
             } else if ($_GET['cible'] == "about"){
                 include("Vue/about.php");
+            } else if ($_GET['cible'] == "Gérer"){
+                  include("Vue/Edit.php");
            } else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
                 $_SESSION = array();

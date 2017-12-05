@@ -48,7 +48,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="index.php?cible=Myprofile">My Profile</a>
+                        <a href="index.php?cible=Myprofile">Mon Profile</a>
 
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">

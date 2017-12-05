@@ -31,27 +31,27 @@ $contenu = '
 			<form>
 		     <div class="form-group">
 		       <label for="usr">Nom:</label>
-		       <input type="text" class="form-control" name="Nom" value="Michel"readonly="true">
+		       <input type="text" class="form-control" name="Nom" value="Michel">
 		     </div>
 				 <div class="form-group">
 		       <label for="usr">Prénom:</label>
-		       <input type="text" class="form-control" name="Prénom" value="John"readonly="true">
+		       <input type="text" class="form-control" name="Prénom" value="John">
 		     </div>
 				 <div class="form-group">
 					<label for="usr">Email:</label>
-					<input type="text" class="form-control" name="Email" value="John-Michel@xxx.com"readonly="true">
+					<input type="text" class="form-control" name="Email" value="John-Michel@xxx.com">
 				</div>
 				 <div class="form-group">
 		       <label for="usr">Utilisateur ID:</label>
-		       <input type="text" class="form-control" name="ID" value="John-Michel"readonly="true">
+		       <input type="text" class="form-control" name="ID" value="John-Michel">
 		     </div>
 				 <div class="form-group">
 		       <label for="usr">Appartement ID :</label>
-		       <input type="text" class="form-control" name="APP" value="1"readonly="true">
+		       <input type="text" class="form-control" name="APP" value="1">
 		     </div>
 				 <div class="form-group">
 		       <label for="usr">Code Postale:</label>
-		       <input type="text" class="form-control" name="Post" value="75001"readonly="true">
+		       <input type="text" class="form-control" name="Post" value="75001">
 		     </div>
 
 		   </form>
@@ -66,8 +66,8 @@ $contenu = '
 
 
 
-  <a href="index.php?cible=Gérer"><button type="button" class="btn btn-primary">Gére</button>
-	<a href="index.php"><button type="button" class="btn btn-primary">Retour</button
+  <a href="index.php?cible=Myprofile"><button type="button" class="btn btn-primary">Confirmer</button></a>
+
 
 </body>
 
