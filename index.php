@@ -20,6 +20,8 @@
                 include("Vue/etape3.php");
             } else if ($_GET['cible'] == "Myprofile"){
                   include("Vue/Myprofile.php");
+            } else if ($_GET['cible'] == "nouscontacter"){
+                  include("Vue/nous_contacter.php");
             } else if ($_GET['cible'] == "about"){
                 include("Vue/about.php");
            } else if ($_GET['cible'] == "deconnexion"){
