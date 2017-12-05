@@ -7,9 +7,9 @@
         return $reponse;
     }
 
-    function appt($db,$identifiant){
+    function appt($db,$User_Id){
 
-        $reponse = $db->query('SELECT * FROM (SELECT ApptId,appartment.User_Id FROM appartment INNER JOIN user ON user.User_Id=appartment.User_Id) AS tempo WHERE User_Id=(SELECT User_Id FROM user WHERE Username="'.$identifiant.'")');
+        $reponse = $db->query('SELECT * FROM (SELECT ApptId,appartment.User_Id FROM appartment INNER JOIN user ON user.User_Id=appartment.User_Id) AS tempo WHERE User_Id="'.$User_Id.'"');
         return $reponse;
     }
 
