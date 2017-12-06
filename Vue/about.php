@@ -88,7 +88,7 @@ body {
 
   <body>
 
-  <h1 class="titre" >About us</h1>
+  <h1 class="titre" >A Propos</h1>
   <p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre
 
   </p>
