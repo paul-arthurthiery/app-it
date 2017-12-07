@@ -24,7 +24,7 @@ $contenu = '
 <body>
 	<h1 class="h1"> Mon Profile</h1>
 	<hr/>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="profiles">
 
 
