@@ -2,21 +2,25 @@
 
 
 include("Modele/menu.php");
-include("Modele/connexion.php");
-//require("Modele/connexion.php");
 
 function genAptMenu() {
-  include("Modele/connexion.php");
+
+  global $db,$_SESSION;
+
 
   $appt = GetAppt($db,$_SESSION['User_Id']);
 
-  $menu = '<ul class="collapse list-unstyled" id="homeSubmenu">';
+  echo ('<ul class="collapse list-unstyled" id="homeSubmenu">');
   $reponse_appt=$appt->fetchAll();
   for ($i = 0; $i<count($reponse_appt); $i++) {
-
-    $data=$reponse_appt[$i]['Name'];
-    $menu .="<li><a>$data</a></li>";
+    $data = $reponse_appt[$i]['Name'];
+    $j=$i+1;
+    echo ('<li><a href="index.php?cible=apt'.$j.'">'.$data.'</a></li>');
   }
-  $menu .= '</ul>';
+  echo ("<li><a href='index.php?cible=create_appartment'>Create apartment</a></li>");
+  echo ('</ul>');
+
+  $menu = ob_get_clean();
+  return $menu;
 }
 ?>

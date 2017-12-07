@@ -40,9 +40,14 @@
                     <p><font size="6">SmartPanel</font></p>
                     <li class="active">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Appartements</a>
-                           <?php if (!empty($menu)) {
-                               echo($menu);
-                           }?>
+                           <?php
+                              if (!empty($menu)) {
+                                 echo($menu);
+                               }
+                               //echo "test";
+
+
+                               ?>
                     </li>
                     <li>
                         <a href="index.php?cible=Myprofile">My Profile</a>
