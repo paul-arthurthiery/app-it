@@ -31,28 +31,26 @@ $contenu = '
 			<form>
 		     <div class="form-group">
 		       <label for="usr">Nom:</label>
-		       <input type="text" class="form-control" name="Nom" value="Michel">
+		       <input type="text" class="form-control" name="Nom" placeholder="Votre nom">
 		     </div>
 				 <div class="form-group">
 		       <label for="usr">Prénom:</label>
-		       <input type="text" class="form-control" name="Prénom" value="John">
+		       <input type="text" class="form-control" name="Prénom" placeholder="Votre Prénom">
+		     </div>
+		       <div class="form-group">
+		       <label for="usr">Password:</label>
+		       <input type="text" class="form-control" name="password" placeholder="Votre Password">
 		     </div>
 				 <div class="form-group">
-					<label for="usr">Email:</label>
-					<input type="text" class="form-control" name="Email" value="John-Michel@xxx.com">
+					<label for="usr">Address:</label>
+					<input type="text" class="form-control" name="Address" placeholder="xxx RUE xxx ville">
 				</div>
-				 <div class="form-group">
-		       <label for="usr">Utilisateur ID:</label>
-		       <input type="text" class="form-control" name="ID" value="John-Michel">
-		     </div>
-				 <div class="form-group">
-		       <label for="usr">Appartement ID :</label>
-		       <input type="text" class="form-control" name="APP" value="1">
-		     </div>
-				 <div class="form-group">
+				<div class="form-group">
 		       <label for="usr">Code Postale:</label>
-		       <input type="text" class="form-control" name="Post" value="75001">
+		       <input type="text" class="form-control" name="Post" placeholder="75001">
 		     </div>
+				 
+				 
 
 		   </form>
 

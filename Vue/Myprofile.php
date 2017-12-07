@@ -38,14 +38,6 @@ if (mysqli_num_rows($res_3) > 0) {
     }
 } 
 
-$sql_4 = "SELECT E_mail FROM user WHERE User_Id = '$USER'";
-$res_4 = mysqli_query($con, $sql_4);
-if (mysqli_num_rows($res_4) > 0) {
-    while($row = mysqli_fetch_assoc($res_4)) {
-        $resu_4 = $row['E_mail'];
-    }
-} 
-
 $sql_5 = "SELECT Address FROM appartment WHERE User_Id = '$USER'";
 $res_5 = mysqli_query($con, $sql_5);
 if (mysqli_num_rows($res_5) > 0) {
@@ -79,15 +71,6 @@ while($row = $result -> fetch_assoc())
 
 $contenu = '
 
-
-
-
-';
-
-include('gabarit.php')
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,28 +92,24 @@ include('gabarit.php')
 			<form>
 		     <div class="form-group">
 		       <label for="usr">Nom et Prénom:</label>
-		       <input type="text" class="form-control" name="Nom" value="<?php echo $resu_1 ?>" readonly="true">
+		       <input type="text" class="form-control" name="Nom" value="'.$resu_1.'"readonly="true">
 		     </div>
 			 <div class="form-group">
 		       <label for="usr">Utilisateur ID:</label>
-		       <input type="text" class="form-control" name="ID" value="<?php echo $resu_2 ?>" readonly="true">
+		       <input type="text" class="form-control" name="ID" value="'.$resu_2.'" readonly="true">
 		     </div>
-		        <div class="form-group">
+		       <div class="form-group">
 		       <label for="usr">Password:</label>
-		       <input type="password" class="form-control" name="password" value="<?php echo $resu_3 ?>" readonly="true">
+		       <input type="password" class="form-control" name="password" value="'.$resu_3.'" readonly="true">
 		     </div>
-				 <div class="form-group">
-					<label for="usr">Email:</label>
-					<input type="text" class="form-control" name="Email" value="<?php echo $resu_4 ?>" readonly="true">
-				</div>
 			  <div class="form-group">
 		       <label for="usr">Address:</label>
-		       <input type="text" class="form-control" name="Post" value="<?php echo $resu_5 ?>" readonly="true">
+		       <input type="text" class="form-control" name="Post" value="'.$resu_5.'" readonly="true">
 		     </div>
 		     
 			 <div class="form-group">
 		       <label for="usr">Appartement ID :</label>
-		       <input type="text" class="form-control" name="APP" value="<?php echo $resu_6 ?>" readonly="true">
+		       <input type="text" class="form-control" name="APP" value="'.$resu_6.'" readonly="true">
 		     </div>
 				
 
@@ -150,4 +129,12 @@ include('gabarit.php')
 
 </body>
 </html>
+
+
+
+ ';
+
+include('gabarit.php')
+
+?>
 
