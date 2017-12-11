@@ -26,7 +26,10 @@
                 include("Vue/about.php");
             } else if ($_GET['cible'] == "Gérer"){
                   include("Vue/Edit.php");
-           } else if ($_GET['cible'] == "deconnexion"){
+           } else if ($_GET['cible'] == "modi") {
+                  include("Controleur/modi_profile.php");
+           }
+           else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session
                 $_SESSION = array();
                 if (isset($_COOKIE[session_name()])) {
