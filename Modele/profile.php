@@ -1,5 +1,6 @@
 <?php
-require("connexion.php");
+    
+    require("connexion.php");
 
     function Fullname($db,$USER){
     	$sql_1 = "SELECT Fullname FROM user WHERE User_Id = '$USER'";
@@ -25,6 +26,18 @@ require("connexion.php");
     	$sql_5 = "SELECT ApptId FROM appartment WHERE User_Id = '$USER'";
     	return $sql_5;
     	}
+
+    function query1($con,$USER,$fullname){
+        $result_1 = mysqli_query($con,"UPDATE user SET Fullname='$fullname' WHERE User_Id = '$USER'");
+    }  
+
+    function query2($con,$USER,$password){
+        $result_2 = mysqli_query($con,"UPDATE user SET Password='$password' WHERE User_Id = '$USER'");
+    }
+
+    function query3($con,$USER,$address){
+        $result_3=mysqli_query($con,"UPDATE appartment SET Address='$address' WHERE User_Id = '$USER'");
+    }
 
 
 
