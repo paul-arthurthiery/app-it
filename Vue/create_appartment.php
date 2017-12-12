@@ -39,7 +39,7 @@
 					</div>
 					<br>
 					<div class="form-group center-block">
-						<label for="address" class="control-label col-sm-5">Address: </label>
+						<label for="address" class="control-label col-sm-5">Adresse: </label>
 						<div class="col-sm-6">
 							<input type="text" name="address">
 						</div>
@@ -54,7 +54,7 @@
 					<br><br><br>
 					<button class="btn btn-primary btn-lg btn-block" type="submit">Créer son appartement</button>
 				</form>
-				
+
 				<?php if (!empty($erreur)) {
 			    	echo($erreur);
 				}?>
