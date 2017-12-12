@@ -7,7 +7,7 @@
     }
 
     function getUserIDOfApartmentID($db,$apartementID) {
-      $reponse = $db->query('SELECT ApptId FROM appartment WHERE ApptId = ".$apartementID"');
+      $reponse = $db->query('SELECT User_Id FROM appartment WHERE ApptId = "'.$apartementID.'"');
       return $reponse;
     }
 ?>
