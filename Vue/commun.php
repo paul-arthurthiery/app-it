@@ -14,8 +14,8 @@ function genAptMenu() {
   $reponse_appt=$appt->fetchAll();
   for ($i = 0; $i<count($reponse_appt); $i++) {
     $data = $reponse_appt[$i]['Name'];
-    $j=$i+1;
-    echo ('<li><a href="index.php?cible=apt'.$j.'">'.$data.'</a></li>');
+    $j=$reponse_appt[$i]['ApptId'];
+    echo ('<li><a href="index.php?cible=apt&aptID='.$j.'">'.$data.'</a></li>');
   }
   echo ("<li><a href='index.php?cible=create_appartment'>Create apartment</a></li>");
   echo ('</ul>');

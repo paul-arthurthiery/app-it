@@ -10,7 +10,13 @@
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
             if($_GET['cible'] == 'accueil'){
                 include("Vue/accueil.php");
-            } else if ($_GET['cible'] == "etape1"){
+            }
+
+            elseif ($_GET['cible'] == "apt")
+            {
+              include("Vue/apartement.php");
+            }
+            else if ($_GET['cible'] == "etape1"){
                 include("Modele/utilisateurs.php");
                 $reponse = utilisateurs($db);
                 include("Vue/etape1.php");
