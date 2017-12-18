@@ -38,26 +38,32 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h3>Contact Form</h3>
+<h3>Contacter le suport</h3>
 
 <div class="container-fluid">
   <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="fname">Prénom</label>
+    <input type="text" id="fname" name="firstname" placeholder="Votre Prenom..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lname">Nom</label>
+    <input type="text" id="lname" name="lastname" placeholder="Votre Nom ..">
 
-    <label for="country">Country</label>
+    <label for="country">Pay</label>
     <select id="country" name="country">
       <option value="france">FRANCE</option>
+      <option value="autre">COREE DU NORD</option>
+      <option value="autre">AFGANISTAN</option>
+      <option value="autre">SOMALIE</option>
+      <option value="autre">ZIMBABWE</option>
+      <option value="autre">INDE</option>
+      <option value="autre">CHINE</option>
       <option value="autre">AUTRE</option>
     </select>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="subject">Subjet</label>
+    <textarea id="subject" name="subject" placeholder="Quel est votre problemme .." style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Soumettre">
   </form>
 </div>
 
