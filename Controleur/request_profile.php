@@ -3,44 +3,37 @@
 $USER = $_SESSION['User_Id'];
 require("Modele/profile.php");
 
-$sql_1 = Fullname ($db,$USER);
-$res_1 = mysqli_query($con, $sql_1);
-if (mysqli_num_rows($res_1) > 0) {
-    while($row = mysqli_fetch_assoc($res_1)) {
-        $resu_1 = $row['Fullname'];
-    }
-} 
+$reponse_1 = Fullname ($db,$USER);
+$reponse_1->setFetchMode(\PDO::FETCH_NUM);
+while($row = $reponse_1->fetch(\PDO::FETCH_ASSOC)){
+    $data_1 = $row['Fullname'];
+}
                     
-$sql_2 = User_Id ($db,$USER);
-$res_2 = mysqli_query($con, $sql_2);
-if (mysqli_num_rows($res_2) > 0) {
-    while($row = mysqli_fetch_assoc($res_2)) {       
-        $resu_2 = $row['User_Id'];
-    }
+$reponse_2 = User_Id ($db,$USER);
+$reponse_2->setFetchMode(\PDO::FETCH_NUM);
+while($row = $reponse_2->fetch(\PDO::FETCH_ASSOC)){
+    $data_2 = $row['User_Id'];
 }
 
-$sql_3 = Password ($db,$USER);
-$res_3 = mysqli_query($con, $sql_3);
-if (mysqli_num_rows($res_3) > 0) {
-    while($row = mysqli_fetch_assoc($res_3)) {       
-        $resu_3 = $row['Password'];
-    }
-} 
+$reponse_3 = Password ($db,$USER);
+$reponse_3->setFetchMode(\PDO::FETCH_NUM);
+while($row = $reponse_3->fetch(\PDO::FETCH_ASSOC)){
+    $data_3 = $row['Password'];
+}
 
-$sql_4 = Address ($db,$USER);
-$res_4 = mysqli_query($con, $sql_4);
-if (mysqli_num_rows($res_4) > 0) {
-    while($row = mysqli_fetch_assoc($res_4)) {      
-        $resu_4 = $row['Address'];
-    }
-} 
 
-$sql_5 = ApptId ($db,$USER);
-$res_5 = mysqli_query($con, $sql_5);
-if (mysqli_num_rows($res_5) > 0) {  
-    while($row = mysqli_fetch_assoc($res_5)) {
-        $resu_5 = $row['ApptId'];
-    }
-} 
+$reponse_4 = Address ($db,$USER);
+$reponse_4->setFetchMode(\PDO::FETCH_NUM);
+while($row = $reponse_4->fetch(\PDO::FETCH_ASSOC)){
+    $data_4 = $row['Address'];
+}
+
+
+$reponse_5= ApptId ($db,$USER);
+$reponse_5->setFetchMode(\PDO::FETCH_NUM);
+while($row = $reponse_5->fetch(\PDO::FETCH_ASSOC)){
+    $data_5 = $row['ApptId'];
+}
+
 
 ?>

@@ -28,24 +28,24 @@ $contenu = '
 			<form>
 		     <div class="form-group">
 		       <label for="usr">Nom et Prénom:</label>
-		       <input type="text" class="form-control" name="Nom" value="'.$resu_1.'"readonly="true">
+		       <input type="text" class="form-control" name="Nom" value="'.$data_1.'"readonly="true">
 		     </div>
 			 <div class="form-group">
 		       <label for="usr">Utilisateur ID:</label>
-		       <input type="text" class="form-control" name="ID" value="'.$resu_2.'" readonly="true">
+		       <input type="text" class="form-control" name="ID" value="'.$data_2.'" readonly="true">
 		     </div>
 		       <div class="form-group">
 		       <label for="usr">Password:</label>
-		       <input type="password" class="form-control" name="password" value="'.$resu_3.'" readonly="true">
+		       <input type="password" class="form-control" name="password" value="'.$data_3.'" readonly="true">
 		     </div>
 			  <div class="form-group">
 		       <label for="usr">Address:</label>
-		       <input type="text" class="form-control" name="Post" value="'.$resu_4.'" readonly="true">
+		       <input type="text" class="form-control" name="Post" value="'.$data_4.'" readonly="true">
 		     </div>
 		     
 			 <div class="form-group">
 		       <label for="usr">Appartement ID :</label>
-		       <input type="text" class="form-control" name="APP" value="'.$resu_5.'" readonly="true">
+		       <input type="text" class="form-control" name="APP" value="'.$data_5.'" readonly="true">
 		     </div>
 				
 
@@ -70,7 +70,7 @@ $contenu = '
 
  ';
 
-include('gabarit.php')
+include('gabarit.php');
 
 ?>
 
