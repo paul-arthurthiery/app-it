@@ -44,14 +44,6 @@
                     </li>
                     <li>
                         <a href="index.php?cible=Myprofile">Mon Profile</a>
-
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="index.php?cible=Page1">Page 1</a></li>
-                            <li><a href="index.php?cible=Page2">Page 2</a></li>
-                            <li><a href="index.php?cible=Page3">Page 3</a></li>
-                            <li><a href="index.php?cible=Page4">Page 4</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="index.php?cible=nouscontacter">Nous contacter</a>
