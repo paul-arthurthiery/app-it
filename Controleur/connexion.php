@@ -8,7 +8,7 @@
 
             $reponse = mdp($db,$_POST['identifiant']);
             $getUID = getUID($db,$_POST['identifiant']);
-            
+
 
             if($reponse->rowcount()==0){  // L'utilisateur n'a pas été trouvé dans la base de données
                 $erreur = "Utilisateur inconnu";
@@ -30,9 +30,13 @@
                       include("Vue/create_appartment.php");
                       }
                     else {
-                
-
-                      include("Vue/accueil.php");
+                      include("Modele/statutAdministrateur.php");
+                      $estAdministrateur = estAdministrateur($db, $UID['User_Id'])['IsAdmin'];
+                      if ($estAdministrateur == 0) {
+                        include("Vue/accueil.php");
+                      } elseif ($estAdministrateur == 1) {
+                        include("Vue/admin.php");
+                      }
                     }
                 }
             }

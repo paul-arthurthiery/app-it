@@ -45,6 +45,12 @@
                 include("Vue/non_connecte.php");
             }
         } else { // affichage par défaut
-                include("Vue/accueil.php");
+          include("Modele/statutAdministrateur.php");
+          $estAdministrateur = estAdministrateur($db, $_SESSION['User_Id'])['IsAdmin'];
+          if ($estAdministrateur == 0) {
+            include("Vue/accueil.php");
+          } elseif ($estAdministrateur == 1) {
+            include("Vue/admin.php");
+          }
         }
     }
