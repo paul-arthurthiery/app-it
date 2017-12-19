@@ -95,4 +95,7 @@ tbody td, thead th {
 </table>
 
 </div>
+
+<a href="index.php" class="btn btn-danger pull-right" role="button">Retour</a>
+
 </div>
