@@ -19,7 +19,7 @@ $contenu = '
 </head>
 
 <body>
-	<h1 class="h1"> Mon Profile</h1>
+	<h1 class="h1"> Mon Profil</h1>
 	<hr/>
 	<div class="container-fluid">
 		<div class="profiles">
@@ -42,12 +42,12 @@ $contenu = '
 		       <label for="usr">Address:</label>
 		       <input type="text" class="form-control" name="Post" value="'.$data_4.'" readonly="true">
 		     </div>
-		     
+
 			 <div class="form-group">
 		       <label for="usr">Appartement ID :</label>
 		       <input type="text" class="form-control" name="APP" value="'.$data_5.'" readonly="true">
 		     </div>
-				
+
 
 		   </form>
 
@@ -73,4 +73,3 @@ $contenu = '
 include('gabarit.php');
 
 ?>
-
