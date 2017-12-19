@@ -60,6 +60,10 @@
             session_destroy();
 
             include("Vue/non_connecte.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
+            include ("Vue/administration/typesCapteurs.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
+            include ("Vue/administration/typesCapteurs.php");
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {
