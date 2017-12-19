@@ -17,7 +17,7 @@ function genAptMenu() {
     $j=$reponse_appt[$i]['ApptId'];
     echo ('<li><a href="index.php?cible=apt&aptID='.$j.'">'.$data.'</a></li>');
   }
-  echo ("<li><a href='index.php?cible=create_appartment'>Create apartment</a></li>");
+  echo ("<li><a href='index.php?cible=createapt'>Create apartment</a></li>");
   echo ('</ul>');
 
   $menu = ob_get_clean();

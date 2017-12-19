@@ -20,6 +20,10 @@
 			    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 			    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 			    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+					position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -60%);
 			}
 		</style>
 
