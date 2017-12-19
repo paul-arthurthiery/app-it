@@ -5,5 +5,6 @@
 	</head>
 	<body>
 		<p>Ceci est le panneau d'administration.</p>
+		<a href="index.php?cible=deconnexion">Déconnexion</a>
 	</body>
 </html>

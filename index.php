@@ -8,7 +8,7 @@
   } else { // L'utilisateur est connecté
     include("Modele/statutAdministrateur.php");
     $estAdministrateur = estAdministrateur($db, $_SESSION['User_Id'])['IsAdmin'];
-    if ($estAdministrateur == 0) {
+    if ($estAdministrateur == 0) { // Routeur utilisateur
         include("Controleur/new_appartment.php");
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
           if($_GET['cible'] == 'accueil') {
@@ -48,9 +48,9 @@
         } else { // affichage par défaut
             include("Vue/accueil.php");
           }
-        } elseif (estAdministrateur($db, $_SESSION['User_Id'])['IsAdmin'] == 1) {
+        } elseif (estAdministrateur($db, $_SESSION['User_Id'])['IsAdmin'] == 1) { // Routeur administrateur
 
-          if (isset($_GET['cible']) && $_GET['cible'] == "deconnexion") { // Détruit toutes les variables de session
+          if (isset($_GET['cible']) && $_GET['cible'] == "deconnexion") {
             $_SESSION = array();
             if (isset($_COOKIE[session_name()])) {
               setcookie(session_name(), '', time()-42000, '/');
