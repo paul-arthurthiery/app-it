@@ -28,16 +28,25 @@
         return $reponse_5;
     	}
 
-    function query1($con,$USER,$fullname){
-        $result_1 = mysqli_query($con,"UPDATE user SET Fullname='$fullname' WHERE User_Id = '$USER'");
+    function query1($db,$USER,$fullname){
+        $result_1 = "UPDATE user SET Fullname='$fullname' WHERE User_Id = '$USER'";
+        $stmt_1 = $db->prepare($result_1);
+        $stmt_1->execute();
+        return $stmt_1;
     }  
 
-    function query2($con,$USER,$password){
-        $result_2 = mysqli_query($con,"UPDATE user SET Password='$password' WHERE User_Id = '$USER'");
+    function query2($db,$USER,$password){
+        $result_2 = "UPDATE user SET Password='$password' WHERE User_Id = '$USER'";
+        $stmt_2 = $db->prepare($result_2);
+        $stmt_2->execute();
+        return $stmt_2;
     }
 
-    function query3($con,$USER,$address){
-        $result_3=mysqli_query($con,"UPDATE appartment SET Address='$address' WHERE User_Id = '$USER'");
+    function query3($db,$USER,$address){
+        $result_3 = "UPDATE appartment SET Address='$address' WHERE User_Id = '$USER'";
+        $stmt_3 = $db->prepare($result_3);
+        $stmt_3->execute();
+        return $stmt_3;
     }
 
 

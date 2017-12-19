@@ -8,9 +8,9 @@ if(isset($_GET['cible']) && $_GET['cible']=="modi") {
     $check=md5($_POST['checkPassword']);
     if ($password == $check){
     	require("Modele/profile.php") ;
-    	$result_1=query1($con,$USER,$fullname);
-    	$result_2=query2($con,$USER,$password);
-    	$result_3=query3($con,$USER,$address);
+    	$stmt_1=query1($db,$USER,$fullname);
+    	$stmt_2=query2($db,$USER,$password);
+    	$stmt_3=query3($db,$USER,$address);
     	include("gabarit.php");
 
     } else {
