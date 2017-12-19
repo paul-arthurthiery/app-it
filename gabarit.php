@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>
-           <?php echo($titre); ?>
+           SmartPanel
         </title>
         <style type="text/css">
         ul li {list-style-type: none; }
@@ -38,7 +38,7 @@
 
                 <ul class="list-unstyled components">
                     <p><font size="6">SmartPanel</font></p>
-                    <li class="active">
+                    <li>
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Appartements</a>
                         <?php echo genAptMenu(); ?>
                     </li>
