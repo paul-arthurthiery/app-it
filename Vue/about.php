@@ -89,19 +89,16 @@ body {
   <body>
 
   <h1 class="titre" >A Propos</h1>
-  <p>This is a paragraph.so if i just rwigth stuff like that verry verry long  so we break line bishy bishy texte texte machin je ne sait pas encore quoi metre
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
 
   </p>
-  <p>other stuff to say in an another paragraph
 
-  </p>
 
 
   <hr>
 
   <h2 >The team</h2>
-  <p>This is a paragraph.so if i just rwigth stuff like that </p>
-  <p>other stuff to say in an another paragraph </p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.  </p>
 
 
 <div class="row">
