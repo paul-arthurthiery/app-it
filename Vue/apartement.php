@@ -78,11 +78,13 @@ if ($_SESSION['User_Id']==$userIDOfApartmentID['User_Id'])
 
 
 
-    	$apptBody = '
-    	<h1>Apartement</h1><br>
-    	<div class="container">';
-    	$i=0;
+    	
         $roomArray = getRooms($db, $_GET['aptID'])->fetchAll();
+        $apptBody = '
+        <h1>Apartement</h1><br>
+        <div class="container">';
+        $i=0;
+        if(sizeof($roomArray)==0) { $apptBody = '<h1>Pas de pièce dans cet apartement</h1>'; } else {
     	foreach ($roomArray as $room) {
     		$i++;
     		$roomName = $room['Name'];
@@ -138,7 +140,9 @@ if ($_SESSION['User_Id']==$userIDOfApartmentID['User_Id'])
 	        	</div>';
     	};
     
-    $contenu = $apptBody;
+    
+	}
+	$contenu = $apptBody;
 }
 else
 {
