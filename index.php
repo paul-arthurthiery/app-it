@@ -12,7 +12,7 @@
         include("Controleur/new_appartment.php");
         if(isset($_GET['cible'])) { // on regarde la page où il veut aller
           if($_GET['cible'] == 'accueil') {
-            include("Vue/accueil.php");
+            include("Vue/accueil/accueil.php");
           }
           elseif ($_GET['cible'] == "apt") {
             include("Vue/apartement.php");
@@ -48,7 +48,7 @@
                 include("Vue/non_connecte.php");
             }
         } else { // affichage par défaut
-            include("Vue/accueil.php");
+            include("Vue/accueil/accueil.php");
           }
         } elseif (estAdministrateur($db, $_SESSION['User_Id'])['IsAdmin'] == 1) { // Routeur administrateur
 

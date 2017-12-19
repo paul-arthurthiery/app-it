@@ -1,3 +1,0 @@
-<?php
-    include 'gabarit.php';
-?>
