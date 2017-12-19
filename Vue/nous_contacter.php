@@ -38,38 +38,35 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h3>Contacter le suport</h3>
+<h3>Contact Form</h3>
 
 <div class="container-fluid">
-  <form action="/action_page.php">
-    <label for="fname">Prénom</label>
-    <input type="text" id="fname" name="firstname" placeholder="Votre Prenom..">
 
-    <label for="lname">Nom</label>
-    <input type="text" id="lname" name="lastname" placeholder="Votre Nom ..">
+  <form action="Controleur/SendMail.php" method="post" name="form1">
+    <label for="fname">Nom</label>
+    <input type="text" id="fname" name="name" placeholder="Votre nom..">
 
-    <label for="country">Pay</label>
+    <label for="lname">Sujet</label>
+    <input type="text" id="lname" name="Subject" placeholder="Votre Sujet..">
+
+    <label for="country">Pays</label>
     <select id="country" name="country">
       <option value="france">FRANCE</option>
-      <option value="autre">COREE DU NORD</option>
-      <option value="autre">AFGANISTAN</option>
-      <option value="autre">SOMALIE</option>
-      <option value="autre">ZIMBABWE</option>
-      <option value="autre">INDE</option>
-      <option value="autre">CHINE</option>
       <option value="autre">AUTRE</option>
     </select>
 
-    <label for="subject">Subjet</label>
-    <textarea id="subject" name="subject" placeholder="Quel est votre problemme .." style="height:200px"></textarea>
-
-    <input type="submit" value="Soumettre">
-  </form>
+    <label for="subject">Contenu</label>
+    <textarea id="subject" name="subject" placeholder="Quel est votre probleme.." style="height:200px"></textarea>
+    <input type="submit" value="Soumettre" name="submit">
+     </form>
+  
 </div>
 
 </body>
 </html>
 ';
-
+//<a href="index.php?cible=submit"><button type="button" class="btn btn-primary">Submit</button>
+//<input type="submit" value="submit" name="submit">
 include('gabarit.php')
 ?>
+
