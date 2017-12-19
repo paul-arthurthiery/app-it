@@ -43,7 +43,7 @@
                         <?php echo genAptMenu(); ?>
                     </li>
                     <li>
-                        <a href="index.php?cible=Myprofile">Mon Profile</a>
+                        <a href="index.php?cible=Myprofile">Mon Profil</a>
                     </li>
                     <li>
                         <a href="index.php?cible=nouscontacter">Nous contacter</a>
