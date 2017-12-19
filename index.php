@@ -63,7 +63,7 @@
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
             include ("Vue/administration/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
-            include ("Vue/administration/typesCapteurs.php");
+            include ("Vue/administration/utilisateurs.php");
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {
