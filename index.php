@@ -63,7 +63,7 @@
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {
-            include ("Vue/admin.php");
+            include ("Vue/administration/admin.php");
           }
       }
     }

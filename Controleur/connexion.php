@@ -35,7 +35,7 @@
                       if ($estAdministrateur == 0) {
                         include("Vue/accueil.php");
                       } elseif ($estAdministrateur == 1) {
-                        include("Vue/admin.php");
+                        include("Vue/administration/admin.php");
                       }
                     }
                 }
