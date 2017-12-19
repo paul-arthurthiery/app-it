@@ -33,7 +33,7 @@
                       include("Modele/statutAdministrateur.php");
                       $estAdministrateur = estAdministrateur($db, $UID['User_Id'])['IsAdmin'];
                       if ($estAdministrateur == 0) {
-                        include("Vue/accueil/accueil.php");
+                        include("Vue/apartement/apartement.php");
                       } elseif ($estAdministrateur == 1) {
                         include("Vue/administration/admin.php");
                       }
