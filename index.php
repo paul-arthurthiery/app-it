@@ -34,6 +34,8 @@
                   include("Vue/Edit.php");
            } else if ($_GET['cible'] == "modi") {
                   include("Controleur/modi_profile.php");
+           } else if ($_GET['cible'] == "submit"){
+                  include("Controleur/SendMail.php");
            }
            else if ($_GET['cible'] == "deconnexion"){
                 // Détruit toutes les variables de session

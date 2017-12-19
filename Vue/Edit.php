@@ -25,15 +25,15 @@ $contenu = '
 			<form action="index.php?cible=modi" method="post">
 		     <div class="form-group">
 		       <label for="Fullname">Nom et Prénom:</label>
-		       <input type="text" class="form-control" name="Fullname" value="'.$resu_1.'">
+		       <input type="text" class="form-control" name="Fullname" value="'.$data_1.'">
 		     </div>
 			 <div class="form-group">
 		       <label for="User_Id">Utilisateur ID:</label>
-		       <input type="text" class="form-control" name="User_Id" value="'.$resu_2.'" readonly="true">
+		       <input type="text" class="form-control" name="User_Id" value="'.$data_2.'" readonly="true">
 		     </div>
 		       <div class="form-group">
 		       <label for="Password">Password:</label>
-		       <input type="password" class="form-control" name="Password" value="'.$resu_3.'">
+		       <input type="password" class="form-control" name="Password" value="'.$data_3.'">
 		     </div>
 		       <div class="form-group">
 		       <label for="Password">Confirmer Password:</label>
@@ -41,12 +41,12 @@ $contenu = '
 		     </div>
 			  <div class="form-group">
 		       <label for="Address">Address:</label>
-		       <input type="text" class="form-control" name="Address" value="'.$resu_4.'">
+		       <input type="text" class="form-control" name="Address" value="'.$data_4.'">
 		     </div>
 		     
 			 <div class="form-group">
 		       <label for="ApptId">Appartement ID :</label>
-		       <input type="text" class="form-control" name="ApptId" value="'.$resu_5.'" readonly="true">
+		       <input type="text" class="form-control" name="ApptId" value="'.$data_5.'" readonly="true">
 		     </div>
 		     <div class="form-group">
               <a href="index.php"><button type="submit" class="btn btn-primary" name="modi">Confirmer</button></a>  
