@@ -63,6 +63,10 @@
 			color: #ffd8a6;
 			text-decoration: none;
 			}
+#notFound
+{
+  text-align: center;
+}
 		</style>
 	</head>
 </html>
@@ -98,12 +102,12 @@ if ($testWhosApt)
 
     	// !isset($_GET['ApptId'] ? $roomArray = getRooms($db, $firstAptID)->fetchAll() : $roomArray = getRooms($db, $_GET['aptID'])->fetchAll();
 
-    	
+
         $apptBody = '
         <h1>Apartement</h1><br>
         <div class="container">';
         $i=0;
-        if(sizeof($roomArray)==0) { $apptBody = '<h1>Pas de pièce dans cet apartement</h1>'; } else {
+        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="notFound">Pas de pièce dans cet apartement</h1>'; } else {
     	foreach ($roomArray as $room) {
     		$i++;
     		$roomName = $room['Name'];
@@ -116,11 +120,11 @@ if ($testWhosApt)
 		                    <div class="card-image">
 		                        <img class="img-responsive" src="../sensordespi.png">
 		                    </div>
-	                    
+
 		                    <div class="card-content">
 		                        <p>Sensor '. $i.'</p>
 		                    </div>
-	                    
+
 		                    <div class="card-action">
 		                        <a href="#" target="new_blank">Sensor Value</a>
 		                    </div>
@@ -131,11 +135,11 @@ if ($testWhosApt)
 		                    <div class="card-image">
 		                        <img class="img-responsive" src="../sensordespi.png">
 		                    </div>
-	                    
+
 		                    <div class="card-content">
 		                        <p>Sensor '. $i.'</p>
 		                    </div>
-	                    
+
 		                    <div class="card-action">
 		                        <a href="#" target="new_blank">Sensor Value</a>
 		                    </div>
@@ -146,11 +150,11 @@ if ($testWhosApt)
 		                    <div class="card-image">
 		                        <img class="img-responsive" src="../sensordespi.png">
 		                    </div>
-	                    
+
 		                    <div class="card-content">
 		                        <p>Sensor '. $i.'</p>
 		                    </div>
-	                    
+
 		                    <div class="card-action">
 		                        <a href="#" target="new_blank">Sensor Value</a>
 		                    </div>
@@ -158,8 +162,8 @@ if ($testWhosApt)
 	            	</div>
 	        	</div>';
     	};
-    
-    
+
+
 	}
 	$contenu = $apptBody;
 }

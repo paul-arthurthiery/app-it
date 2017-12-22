@@ -21,7 +21,7 @@ thead th {
 }
 
 tbody {
-    height: 400px;
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -39,12 +39,24 @@ th {
     cursor: pointer;
 }
 
+#myInput{
+  width: 30%;
+}
+
+body{
+  padding: 20px;
+}
+
 </style>
+<body>
+<div class = "container-fluid" >
+  <h1>Utilisateurs</h1>
+  <br/>
 
-<div class = "container-fluid">
-  <h2>Utilisateurs</h2>
+  <input type="text" id="myInput" onkeyup="research()" placeholder="Rechercher un utilisateur" title="Type in a name">
 
-  <input type="text" id="myInput" onkeyup="research()" placeholder="Search for names.." title="Type in a name">
+  <br/>
+  <br/>
 
 <div class="span3">
 <table class="table table-striped" id="userTable">
@@ -71,6 +83,7 @@ th {
 
 </div>
 
+</body>
 
 <script>
 

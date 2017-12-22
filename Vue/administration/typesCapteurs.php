@@ -96,6 +96,6 @@ tbody td, thead th {
 
 </div>
 
-<a href="index.php" class="btn btn-danger pull-right" role="button">Retour</a>
+<a href="index.php" class="btn btn-danger pull-right" role="button">Déconnexion</a>
 
 </div>
