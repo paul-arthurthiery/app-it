@@ -30,7 +30,7 @@ if (!isset($_GET['aptID'])){
 
 if ($testWhosApt)
 {
-    	$titre = "Premier Appartement";
+
 
 
     	// !isset($_GET['ApptId'] ? $roomArray = getRooms($db, $firstAptID)->fetchAll() : $roomArray = getRooms($db, $_GET['aptID'])->fetchAll();
@@ -38,62 +38,36 @@ if ($testWhosApt)
 
         $apptBody = '
         <h1>Apartement</h1><br>
-        <div class="container">';
+        <div class="container">
+          <div class="row">';
         $i=0;
         if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1>'; } else {
     	foreach ($roomArray as $room) {
     		$i++;
+
+        if($i %2  != 0) {
+          $apptBody .= '
+            </div>
+          <div class="row">';
+        }
     		$roomName = $room['Name'];
     		$apptBody .= '
-    			<h3>'. $roomName.'</h3>
-        		<div class="row">
-	            	<!-- Card Projects -->
-	            	<div class="col-md-2">
-		            	<div class="card">
-		                    <div class="card-image">
-		                        <img class="img-responsive" src="../sensordespi.png">
-		                    </div>
+          	<!-- Card Projects -->
+          	<div class="col-md-4">
+            	<div class="card">
+                <div class="card-image">
+                  <img class="img-responsive" src="../sensordespi.png">
+                </div>
 
-		                    <div class="card-content">
-		                        <p>Sensor '. $i.'</p>
-		                    </div>
+                <div class="card-content">
+                  <p>'. $roomName.'</p>
+                </div>
 
-		                    <div class="card-action">
-		                        <a href="#" target="new_blank">Sensor Value</a>
-		                    </div>
-	                	</div>
-	            	</div>
-	            	<div class="col-md-2">
-		            	<div class="card">
-		                    <div class="card-image">
-		                        <img class="img-responsive" src="../sensordespi.png">
-		                    </div>
-
-		                    <div class="card-content">
-		                        <p>Sensor '. $i.'</p>
-		                    </div>
-
-		                    <div class="card-action">
-		                        <a href="#" target="new_blank">Sensor Value</a>
-		                    </div>
-	                	</div>
-	            	</div>
-	            	<div class="col-md-2">
-		            	<div class="card">
-		                    <div class="card-image">
-		                        <img class="img-responsive" src="../sensordespi.png">
-		                    </div>
-
-		                    <div class="card-content">
-		                        <p>Sensor '. $i.'</p>
-		                    </div>
-
-		                    <div class="card-action">
-		                        <a href="#" target="new_blank">Sensor Value</a>
-		                    </div>
-	                	</div>
-	            	</div>
-	        	</div>';
+                <div class="card-action">
+                  <a href="#" target="new_blank">Sensor Value</a>
+                </div>
+              </div>
+          	</div>';
     	};
 
 
