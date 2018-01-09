@@ -103,22 +103,22 @@ body {
 
 <div class="row">
   <div class="column">
-    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
+    <img src="img_avatar.paul.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
-    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
+    <img src="img_avatar.jerem.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
-    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
+    <img src="img_avatar.alex.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
   <div class="column">
-    <img src="img_avatar.png" alt="Avatar" style="width:200px" align="middle">
+    <img src="img_avatar.adrien.png" alt="Avatar" style="width:200px" align="middle">
     <h2>Column</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
   </div>
