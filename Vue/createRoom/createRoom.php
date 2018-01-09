@@ -18,12 +18,12 @@
     <br>
     <h1>Ajouter capteur</h1>
     <br>
-    <form>
+    <form id='formSensor'>
       Nom
       <br>
       <input type="text" name="Nom">
       <br>
-      <select>
+      <select id = 'php'>
         <?php echo genTypeMenu(); ?>
       </select>
       <br>

@@ -13,8 +13,8 @@
       }
 
       $menu = ob_get_clean();
+      //echo $menu;
       return $menu;
-
     }
   // Récupérer l'ApartmentID en GET quand l'utilisateur clique sur 'créer pièce'
 
