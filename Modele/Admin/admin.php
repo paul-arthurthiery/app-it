@@ -49,8 +49,9 @@
         $Type = $Sensors[$i]['Type'];
         $Value = $Sensors[$i]['Value'];
         $RoomID = $Sensors[$i]['RoomID'];
-
-        if($IsActuator[$i]['IsActuator']==1)
+        $Actuator = $Sensors[$i]['IsActuator'];     
+        
+        if($Actuator==1)
         {
           $Actuator = 'oui';
         }

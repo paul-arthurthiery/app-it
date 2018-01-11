@@ -47,6 +47,9 @@ body{
   padding: 20px;
 }
 
+
+
+
 </style>
 <body>
 <div class = "container-fluid" >
@@ -58,6 +61,7 @@ body{
   <br/>
   <br/>
 
+<form action="index.php?cible=getdata" method="post">
 <div class="span3">
 <table class="table table-striped" id="capteursTable">
 <thead>
@@ -79,10 +83,13 @@ body{
 </table>
 
 </div>
+<a href=""><button type="submit" class="btn btn-primary" name="getdata">Actualiser</button></a> 
 
-<a href="index.php" class="btn btn-danger pull-right" role="button">Retour</a>
+<a href="index.php"  class="btn btn-danger pull-right" role="button">Retour</a>
+
 
 </div>
+</form>
 
 </body>
 

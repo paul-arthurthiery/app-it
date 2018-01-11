@@ -32,6 +32,7 @@
                   include("Vue/Edit.php");
            } else if ($_GET['cible'] == "modi") {
                   include("Controleur/modi_profile.php");
+            
            } else if ($_GET['cible'] == "submit"){
                   include("Controleur/SendMail.php");
            }
@@ -61,6 +62,8 @@
             include ("Vue/administration/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
             include ("Vue/administration/utilisateurs.php");
+          } else if (isset($_GET['cible']) == "getdata") {
+                  include("Controleur/getdata.php");
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {

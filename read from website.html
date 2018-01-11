@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get data from website</title>
+</head>
+
+<body>
+<?php
+$url="http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0011";
+$m= file_get_contents( $url );
+$length = strlen($m); echo($length);
+echo($m)."<br>";
+for ($x = 0; $x <= 3 ; $x++){
+	$TRA = substr("$m",0+33*x,1);
+	$OBJ = substr("$m",1+33*x,4);
+	$REQ = substr("$m",5+33*x,1);
+	$TYP = substr("$m",6+33*x,1);
+
+}
+    echo substr("$m",0+33,1)."<br>";
+	echo substr("$m",1+33,4)."<br>";
+	echo substr("$m",5+33,1)."<br>";
+	echo substr("$m",6+33,1)."<br>";
+	echo substr("$m",7+33,2)."<br>";
+	echo substr("$m",9+33,4)."<br>";
+	echo substr("$m",13+33,4)."<br>";
+	echo substr("$m",17+33,2)."<br>";
+	echo substr("$m",19+33,4) ,"/" ,substr("$m",23+33,2) ,"/",substr("$m",25+33,2)."<br>";
+	echo substr("$m",27+33,2) ,":",substr("$m",29+33,2) ,":",substr("$m",31+33,2)  ."<br>";
+	
+?>
+
+
+</body>
+</html>
