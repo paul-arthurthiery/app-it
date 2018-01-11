@@ -38,19 +38,24 @@
       $reponse = $db->query('SELECT * FROM sensor');
       return $reponse;
     }
-
+    
+    function getsensortype($db){
+      $reponse = $db->query('SELECT * FROM sensortype');
+      return $reponse;
+    }
     function genTableSensor()
     {
       require("Modele/connexion.php");
 
       $Sensors = getSensors($db)->fetchAll();
+      $SensorsTypes = getsensortype($db)->fetchAll();
       for ($i = 0; $i<count($Sensors); $i++) {
         $ID = $Sensors[$i]['SensorID'];
         $Type = $Sensors[$i]['Type'];
         $Value = $Sensors[$i]['Value'];
         $RoomID = $Sensors[$i]['RoomID'];
-
-        if($IsActuator[$i]['IsActuator']==1)
+        $Actuator = $SensorsTypes[$i]['IsActuator'];
+        if($Actuator==1)
         {
           $Actuator = 'oui';
         }
