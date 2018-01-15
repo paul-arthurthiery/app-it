@@ -95,7 +95,7 @@
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <h1 class="text-center login-title">Veuillez vous connecter à Smart Panel</h1>
             <div class="account-wall">
-                <img class="profile-img" src="Logo_app.png" height="120" width="120"
+                <img class="profile-img" src="Images/Logo_APP.png" height="120" width="120"
                     alt="">
                 <form class="form-signin" method="POST" action="index.php?cible=verif">
                 <input type="text" class="form-control" name="identifiant" placeholder="Identifiant" required autofocus>
