@@ -30,7 +30,7 @@
     <body>
 
         <div class="wrapper">
-            <!-- Sidebar Holder -->
+            <!-- div contenant la sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <img src = "Images/Logo_APP.png" height="100" width="100" style="display : block; margin : auto">
@@ -58,7 +58,7 @@
                 </ul>
             </nav>
 
-            <!-- Page Content Holder -->
+            <!-- Contenu de la page -->
             <div id="content">
                 <div id="contenu">
                 <?php if (!empty($contenu)) {
@@ -67,10 +67,6 @@
                 </div>
             </div>
 
-
-
-
-
         <!-- jQuery  -->
         <script src="jQuery/jquery-1.12.0.min.js"></script>
         <!-- Bootstrap Js  -->
@@ -78,18 +74,5 @@
         <!-- jQuery Custom Scroller  -->
         <script src="jQuery/jquery.mCustomScrollbar.concat.min.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
-            });
-        </script>
     </body>
 </html>
