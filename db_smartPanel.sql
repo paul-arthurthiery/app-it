@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mar. 16 jan. 2018 à 16:12
+-- Généré le :  mar. 16 jan. 2018 à 21:25
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -28,7 +28,7 @@ CREATE TABLE `appartment` (
   `ApptId` int(11) NOT NULL,
   `Address` varchar(255) NOT NULL,
   `NumberRooms` tinyint(4) NOT NULL,
-  `User_Id` int(11) NOT NULL
+  `User_Id` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -36,11 +36,12 @@ CREATE TABLE `appartment` (
 --
 
 INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`) VALUES
-('Apt de michel', 1, '1 rue de Paris', 3, 123456789),
-('Apt de john', 2, '2 rue des Pins', 4, 2),
-('Résidence secondaire', 3, '1 rue du pinous', 4, 2),
-('maison de michel', 21653, '17 rue des pins', 5, 123456789),
-('test1', 21654, 'test2', 3, 3);
+('Apt de michel', 1, '1 rue de Paris', 3, '123456789'),
+('Apt de john', 2, '2 rue des Pins', 4, '2'),
+('Résidence secondaire', 3, '1 rue du pinous', 4, '2'),
+('maison de michel', 21653, '17 rue des pins', 5, '123456789'),
+('test1', 21654, 'test2', 3, '3'),
+('test', 21655, 'rue des test', 3, '5a5e5ef6e4702');
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,7 @@ INSERT INTO `sensortype` (`ID`, `Name`, `IsActuator`) VALUES
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `User_Id` int(11) NOT NULL,
+  `User_Id` varchar(13) NOT NULL,
   `Username` varchar(20) NOT NULL,
   `Password` varchar(64) NOT NULL,
   `FullName` varchar(50) NOT NULL,
@@ -120,9 +121,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VALUES
-(2, 'jony', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'John Doe', 0),
-(3, 'alexis', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Alexis', 0),
-(123456789, 'Jean-mich', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Jean-Michel', 1);
+('123456789', 'Jean-mich', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Jean-Michel', 1),
+('2', 'jony', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'John Doe', 0),
+('3', 'alexis', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Alexis', 0),
+('5a5e5ef6e4702', 'test', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'test', 0);
 
 --
 -- Index pour les tables déchargées
@@ -170,7 +172,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `appartment`
 --
 ALTER TABLE `appartment`
-  MODIFY `ApptId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21655;
+  MODIFY `ApptId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21656;
 --
 -- AUTO_INCREMENT pour la table `sensortype`
 --

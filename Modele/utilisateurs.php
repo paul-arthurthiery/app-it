@@ -25,8 +25,9 @@
       return $reponse;
     }
     function createUser($db,$fullName,$identifiant,$mdp){
-     $db->query('INSERT INTO user (Username, Password, FullName, IsAdmin)
-      VALUES ("'.$identifiant.'", "'.$mdp.'", "'.$fullName.'", 0);');
+    $UUID = uniqid();
+     $db->query('INSERT INTO user (User_Id,Username, Password, FullName, IsAdmin)
+      VALUES ("'.$UUID.'","'.$identifiant.'", "'.$mdp.'", "'.$fullName.'", 0);');
     }
 
     function checkUserName($db,$identifiant)
