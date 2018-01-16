@@ -1,78 +1,31 @@
 
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<style>
-table {
-        width: 1em;
-    }
+<link rel="stylesheet" type="text/css" href="Vue/administration/utilisateurs/utilisateurs.css">
 
-thead, tbody, tr, td, th { display: block; }
-
-tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
-}
-
-thead th {
-    /*height: 30px;
-
-    /*text-align: left;*/
-}
-
-tbody {
-    height: 100%;
-    overflow-y: auto;
-}
-
-thead {
-    /* fallback */
-}
-
-
-tbody td, thead th {
-    width:20%;
-    float: left;
-}
-
-th {
-    cursor: pointer;
-}
-
-#myInput{
-  width: 30%;
-}
-
-body{
-  padding: 20px;
-}
-
-</style>
 <body>
 <div class = "container-fluid" >
-  <h1>Capteurs</h1>
+  <h1>Utilisateurs</h1>
   <br/>
 
-  <input type="text" id="myInput" onkeyup="research()" placeholder="Rechercher un capteur" title="Type in a name">
+  <input type="text" id="myInput" onkeyup="research()" placeholder="Rechercher un utilisateur" title="Type in a name">
 
   <br/>
   <br/>
 
 <div class="span3">
-<table class="table table-striped" id="capteursTable">
+<table class="table table-striped" id="userTable">
 <thead>
  <tr class="header">
    <th onclick="sortTable(0)">ID</th>
-   <th onclick="sortTable(1)">Type</th>
-   <th onclick="sortTable(2)">Valeur</th>
-   <th onclick="sortTable(3)">RoomID</th>
-   <th onclick="sortTable(4)">Actuator</th>
+   <th onclick="sortTable(1)">Pseudo</th>
+   <th onclick="sortTable(2)">Nom complet</th>
+   <th onclick="sortTable(3)">Admin</th>
  </tr>
 </thead>
 <tbody>
  <?php
  require("Modele/Admin/admin.php");
- echo genTableSensor();
+ echo genTableUser();
 ?>
 
 </tbody>
@@ -92,7 +45,7 @@ function research() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("capteursTable");
+    table = document.getElementById("userTable");
     tr = table.getElementsByTagName("tr");
     for (i = 1; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td");
@@ -112,7 +65,7 @@ function research() {
 
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("capteursTable");
+  table = document.getElementById("userTable");
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc";

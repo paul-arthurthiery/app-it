@@ -8,29 +8,7 @@
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		  crossorigin="anonymous"></script>
 
-
-		<style>
-		.navbar-default{
-	background:transparent;
-	background-image:none;
-	border-color:transparent;
-	box-shadow:none;
-}
-.account-wall
-{
-		margin-top: 20px;
-		padding: 40px 0px 20px 0px;
-		background-color: #f7f7f7;
-		-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-		position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-}
-
-		</style>
+			<link rel="stylesheet" type="text/css" href="Vue/administration/admin/admin.css">
 
 
 		<title>Page Administrateur</title>

@@ -38,7 +38,7 @@
       $reponse = $db->query('SELECT * FROM sensor');
       return $reponse;
     }
-    
+
     function getsensortype($db){
       $reponse = $db->query('SELECT * FROM sensortype');
       return $reponse;
@@ -47,13 +47,11 @@
     {
       require("Modele/connexion.php");
 
-      $Sensors = getSensors($db)->fetchAll();
+      $Sensors = getsensortype($db)->fetchAll();
       $SensorsTypes = getsensortype($db)->fetchAll();
       for ($i = 0; $i<count($Sensors); $i++) {
-        $ID = $Sensors[$i]['SensorID'];
-        $Type = $Sensors[$i]['Type'];
-        $Value = $Sensors[$i]['Value'];
-        $RoomID = $Sensors[$i]['RoomID'];
+        $ID = $Sensors[$i]['ID'];
+        $Name = $Sensors[$i]['Name'];
         $Actuator = $SensorsTypes[$i]['IsActuator'];
         if($Actuator==1)
         {
@@ -65,9 +63,7 @@
 
         echo (' <tr>
            <td>'.$ID.'</td>
-           <td>'.$Type.'</td>
-           <td>'.$Value.'</td>
-           <td>'.$RoomID.'</td>
+           <td>'.$Name.'</td>
            <td>'.$Actuator.'</td>
            </tr>');
       }

@@ -27,7 +27,7 @@
             } else if ($_GET['cible'] == "nouscontacter"){
                   include("Vue/nous_contacter.php");
             } else if ($_GET['cible'] == "about"){
-                include("Vue/about.php");
+                include("Vue/about/about.php");
             } else if ($_GET['cible'] == "Gérer"){
                   include("Vue/Edit.php");
            } else if ($_GET['cible'] == "modi") {
@@ -58,13 +58,13 @@
 
             include("Vue/non_connecte.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
-            include ("Vue/administration/typesCapteurs.php");
+            include ("Vue/administration/typesCapteurs/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
-            include ("Vue/administration/utilisateurs.php");
+            include ("Vue/administration/utilisateurs/utilisateurs.php");
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {
-            include ("Vue/administration/admin.php");
+            include ("Vue/administration/admin/admin.php");
           }
       }
     }
