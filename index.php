@@ -42,7 +42,7 @@
                     setcookie(session_name(), '', time()-42000, '/');
                 }
                 session_destroy();
-                include("Vue/non_connecte.php");
+                include("Vue/non_connecte/non_connecte.php");
             }
         } else { // affichage par défaut
             include("Vue/404/404.php");
@@ -56,7 +56,7 @@
             }
             session_destroy();
 
-            include("Vue/non_connecte.php");
+            include("Vue/non_connecte/non_connecte.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
             include ("Vue/administration/typesCapteurs/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
