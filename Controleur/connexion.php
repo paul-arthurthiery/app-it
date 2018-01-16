@@ -15,7 +15,7 @@
                 include("Vue/connexion_erreur.php");
             } else { // utilisateur trouvé dans la base de données
                 $ligne = $reponse->fetch();
-                if(md5($_POST['mdp'])!=$ligne['Password']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
+                if(hash('sha256',$_POST['mdp'])!=$ligne['Password']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
                     $erreur = "Mot de passe incorrect";
                     include("Vue/connexion_erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil

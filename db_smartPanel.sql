@@ -1,17 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 11, 2018 at 04:43 PM
--- Server version: 5.6.28
--- PHP Version: 7.0.10
+-- Hôte : localhost:8889
+-- Généré le :  mar. 16 jan. 2018 à 16:12
+-- Version du serveur :  5.6.35
+-- Version de PHP :  7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `smartpanel`
+-- Base de données :  `smartpanel`
 --
 CREATE DATABASE IF NOT EXISTS `smartpanel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `smartpanel`;
@@ -19,7 +19,7 @@ USE `smartpanel`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appartment`
+-- Structure de la table `appartment`
 --
 
 DROP TABLE IF EXISTS `appartment`;
@@ -32,7 +32,7 @@ CREATE TABLE `appartment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `appartment`
+-- Déchargement des données de la table `appartment`
 --
 
 INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `room`
+-- Structure de la table `room`
 --
 
 DROP TABLE IF EXISTS `room`;
@@ -56,7 +56,7 @@ CREATE TABLE `room` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `room`
+-- Déchargement des données de la table `room`
 --
 
 INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sensor`
+-- Structure de la table `sensor`
 --
 
 DROP TABLE IF EXISTS `sensor`;
@@ -83,7 +83,7 @@ CREATE TABLE `sensor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sensortype`
+-- Structure de la table `sensortype`
 --
 
 DROP TABLE IF EXISTS `sensortype`;
@@ -94,7 +94,7 @@ CREATE TABLE `sensortype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `sensortype`
+-- Déchargement des données de la table `sensortype`
 --
 
 INSERT INTO `sensortype` (`ID`, `Name`, `IsActuator`) VALUES
@@ -103,47 +103,47 @@ INSERT INTO `sensortype` (`ID`, `Name`, `IsActuator`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `User_Id` int(11) NOT NULL,
   `Username` varchar(20) NOT NULL,
-  `Password` varchar(32) NOT NULL,
+  `Password` varchar(64) NOT NULL,
   `FullName` varchar(50) NOT NULL,
   `IsAdmin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`User_Id`, `Username`, `Password`, `FullName`, `IsAdmin`) VALUES
-(2, 'jony', '63a9f0ea7bb98050796b649e85481845', 'John Doe', 0),
-(3, 'alexis', '63a9f0ea7bb98050796b649e85481845', 'Alexis', 0),
-(123456789, 'Jean-mich', '63a9f0ea7bb98050796b649e85481845', 'Jean-Michel', 1);
+(2, 'jony', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'John Doe', 0),
+(3, 'alexis', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Alexis', 0),
+(123456789, 'Jean-mich', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2', 'Jean-Michel', 1);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `appartment`
+-- Index pour la table `appartment`
 --
 ALTER TABLE `appartment`
   ADD PRIMARY KEY (`ApptId`),
   ADD KEY `fk_UserID` (`User_Id`);
 
 --
--- Indexes for table `room`
+-- Index pour la table `room`
 --
 ALTER TABLE `room`
   ADD PRIMARY KEY (`RoomID`),
   ADD KEY `fk_ApartmentID` (`ApartmentID`);
 
 --
--- Indexes for table `sensor`
+-- Index pour la table `sensor`
 --
 ALTER TABLE `sensor`
   ADD PRIMARY KEY (`SensorID`),
@@ -151,43 +151,43 @@ ALTER TABLE `sensor`
   ADD KEY `fk_sensor` (`Type`);
 
 --
--- Indexes for table `sensortype`
+-- Index pour la table `sensortype`
 --
 ALTER TABLE `sensortype`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `user`
+-- Index pour la table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`User_Id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `appartment`
+-- AUTO_INCREMENT pour la table `appartment`
 --
 ALTER TABLE `appartment`
   MODIFY `ApptId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21655;
 --
--- AUTO_INCREMENT for table `sensortype`
+-- AUTO_INCREMENT pour la table `sensortype`
 --
 ALTER TABLE `sensortype`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `appartment`
+-- Contraintes pour la table `appartment`
 --
 ALTER TABLE `appartment`
   ADD CONSTRAINT `fk_UserID` FOREIGN KEY (`User_Id`) REFERENCES `user` (`User_Id`);
 
 --
--- Constraints for table `sensor`
+-- Contraintes pour la table `sensor`
 --
 ALTER TABLE `sensor`
   ADD CONSTRAINT `fk_RoomID` FOREIGN KEY (`RoomID`) REFERENCES `room` (`RoomID`),
