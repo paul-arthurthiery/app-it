@@ -28,7 +28,7 @@
                 <button class="btn btn-lg btn-primary btn-block" type="submit">
                     Se connecter</button>
 
-                <a href="#" class="pull-right need-help">Besoin d'aide ? </a><span class="clearfix"></span>
+                <a href="index.php?cible=inscription" class="pull-right need-help">S'inscrire </a><span class="clearfix"></span>
                 </form>
             </div>
             <br/>

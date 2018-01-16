@@ -56,7 +56,7 @@ if ($testWhosApt)
           	<div class="col-md-4">
             	<div class="card">
                 <div class="card-image">
-                  <img class="img-responsive" src="../sensorBB.svg">
+                  <img class="img-responsive" src="../Images/sensorBB.svg">
                 </div>
 
                 <div class="card-content">

@@ -24,8 +24,17 @@
       $reponse = $db->query('SELECT User_Id FROM user WHERE Username="'.$identifiant.'"');
       return $reponse;
     }
-    
+    function createUser($db,$fullName,$identifiant,$mdp){
+     $db->query('INSERT INTO user (Username, Password, FullName, IsAdmin)
+      VALUES ("'.$identifiant.'", "'.$mdp.'", "'.$fullName.'", 0);');
+    }
 
-   
+    function checkUserName($db,$identifiant)
+    {
+      $reponse = $db->query('SELECT * FROM user WHERE Username="'.$identifiant.'" ');
+      return $reponse;
+    }
+
+
 
 ?>

@@ -3,7 +3,11 @@
   require("Modele/connexion.php");
   require("Vue/commun.php");
 
-  if(!isset($_SESSION["User_Id"])) { // L'utilisateur n'est pas connecté
+  if (isset($_GET['cible']) && $_GET['cible'] == "inscription") {
+    include("Vue/inscription/inscription.php");
+  }else if (isset($_GET['cible']) && $_GET['cible'] == "inscriptionValidation") {
+      include("Controleur/inscription.php");
+  }else if(!isset($_SESSION["User_Id"])) { // L'utilisateur n'est pas connecté
     include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
   } else { // L'utilisateur est connecté
     include("Modele/statutAdministrateur.php");
