@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 		<!-- Jquery JS CDN -->
 		<script
 		  src="https://code.jquery.com/jquery-3.2.1.min.js"
