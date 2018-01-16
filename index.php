@@ -25,7 +25,7 @@
             } else if ($_GET['cible'] == "Myprofile"){
                   include("Vue/Myprofile.php");
             } else if ($_GET['cible'] == "nouscontacter"){
-                  include("Vue/nous_contacter.php");
+                  include("Vue/nous_contacter/nous_contacter.php");
             } else if ($_GET['cible'] == "about"){
                 include("Vue/about/about.php");
             } else if ($_GET['cible'] == "Gérer"){
