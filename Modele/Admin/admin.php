@@ -29,6 +29,16 @@
            <td>'.$username.'</td>
            <td>'.$fullName.'</td>
            <td>'.$admin.'</td>
+           <td>
+           <a id="suprUserBtn" data-toggle="confirmation" data-singleton="true"
+               href="index.php?cible=deleteUser&userID='.$ID.'"
+               class="btn btn-danger"
+               data-title="Êtes-vous sûr ?"
+               data-btn-ok-label="Oui"
+               data-btn-cancel-label="Non"
+               role="button">
+               Supprimer '.$fullName.'
+           </a></td>
            </tr>');
       }
 

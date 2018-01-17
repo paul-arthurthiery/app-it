@@ -61,6 +61,8 @@
             session_destroy();
 
             include("Vue/non_connecte/non_connecte.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "deleteUser") {
+            include ("Modele/Admin/deleteUser.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
             include ("Vue/administration/typesCapteurs/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mar. 16 jan. 2018 à 21:25
+-- Généré le :  mer. 17 jan. 2018 à 09:44
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -13,8 +13,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `smartpanel`
 --
-CREATE DATABASE IF NOT EXISTS `smartpanel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `smartpanel`;
 
 -- --------------------------------------------------------
 
@@ -22,7 +20,6 @@ USE `smartpanel`;
 -- Structure de la table `appartment`
 --
 
-DROP TABLE IF EXISTS `appartment`;
 CREATE TABLE `appartment` (
   `Name` varchar(20) NOT NULL,
   `ApptId` int(11) NOT NULL,
@@ -41,7 +38,8 @@ INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`)
 ('Résidence secondaire', 3, '1 rue du pinous', 4, '2'),
 ('maison de michel', 21653, '17 rue des pins', 5, '123456789'),
 ('test1', 21654, 'test2', 3, '3'),
-('test', 21655, 'rue des test', 3, '5a5e5ef6e4702');
+('test', 21655, 'rue des test', 3, '5a5e5ef6e4702'),
+('test', 21656, 'test', 2, '5a5e5ef6e4702');
 
 -- --------------------------------------------------------
 
@@ -49,7 +47,6 @@ INSERT INTO `appartment` (`Name`, `ApptId`, `Address`, `NumberRooms`, `User_Id`)
 -- Structure de la table `room`
 --
 
-DROP TABLE IF EXISTS `room`;
 CREATE TABLE `room` (
   `RoomID` tinyint(4) NOT NULL,
   `ApartmentID` int(11) NOT NULL,
@@ -73,7 +70,6 @@ INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
 -- Structure de la table `sensor`
 --
 
-DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE `sensor` (
   `SensorID` tinyint(4) NOT NULL,
   `Type` int(11) NOT NULL,
@@ -81,13 +77,19 @@ CREATE TABLE `sensor` (
   `RoomID` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `sensor`
+--
+
+INSERT INTO `sensor` (`SensorID`, `Type`, `Value`, `RoomID`) VALUES
+(0, 1, '3', 2);
+
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `sensortype`
 --
 
-DROP TABLE IF EXISTS `sensortype`;
 CREATE TABLE `sensortype` (
   `ID` int(11) NOT NULL,
   `Name` varchar(20) NOT NULL,
@@ -107,7 +109,6 @@ INSERT INTO `sensortype` (`ID`, `Name`, `IsActuator`) VALUES
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `User_Id` varchar(13) NOT NULL,
   `Username` varchar(20) NOT NULL,
@@ -172,7 +173,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `appartment`
 --
 ALTER TABLE `appartment`
-  MODIFY `ApptId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21656;
+  MODIFY `ApptId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21657;
 --
 -- AUTO_INCREMENT pour la table `sensortype`
 --
@@ -186,11 +187,17 @@ ALTER TABLE `sensortype`
 -- Contraintes pour la table `appartment`
 --
 ALTER TABLE `appartment`
-  ADD CONSTRAINT `fk_UserID` FOREIGN KEY (`User_Id`) REFERENCES `user` (`User_Id`);
+  ADD CONSTRAINT `fk_UserID` FOREIGN KEY (`User_Id`) REFERENCES `user` (`User_Id`)ON DELETE CASCADE;
+
+--
+-- Contraintes pour la table `room`
+--
+ALTER TABLE `room`
+  ADD CONSTRAINT `fk_ApartmentID` FOREIGN KEY (`ApartmentID`) REFERENCES `appartment` (`ApptId`)ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `sensor`
 --
 ALTER TABLE `sensor`
-  ADD CONSTRAINT `fk_RoomID` FOREIGN KEY (`RoomID`) REFERENCES `room` (`RoomID`),
-  ADD CONSTRAINT `fk_sensor` FOREIGN KEY (`Type`) REFERENCES `sensortype` (`ID`);
+  ADD CONSTRAINT `fk_RoomID` FOREIGN KEY (`RoomID`) REFERENCES `room` (`RoomID`)ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_sensor` FOREIGN KEY (`Type`) REFERENCES `sensortype` (`ID`)ON DELETE CASCADE;

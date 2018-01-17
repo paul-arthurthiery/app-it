@@ -1,4 +1,7 @@
-
+<script src="jQuery/jquery-1.12.0.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="bootstrap/bootstrap-confirmation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="Vue/administration/utilisateurs/utilisateurs.css">
 
@@ -20,6 +23,7 @@
    <th onclick="sortTable(1)">Pseudo</th>
    <th onclick="sortTable(2)">Nom complet</th>
    <th onclick="sortTable(3)">Admin</th>
+   <th>Supprimer</th>
  </tr>
 </thead>
 <tbody>
@@ -40,6 +44,11 @@
 </body>
 
 <script>
+
+$('[data-toggle=confirmation]').confirmation({
+  rootSelector: '[data-toggle=confirmation]',
+  // other options
+});
 
 function research() {
     var input, filter, found, table, tr, td, i, j;

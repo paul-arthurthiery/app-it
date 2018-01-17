@@ -28,7 +28,7 @@ thead {
 
 
 tbody td, thead th {
-    width:25%;
+    width:20%;
     float: left;
 }
 
@@ -42,4 +42,10 @@ th {
 
 body{
   padding: 20px;
+}
+
+#suprUserBtn
+{
+  font-size: 0.75em;
+  width: 15em;
 }

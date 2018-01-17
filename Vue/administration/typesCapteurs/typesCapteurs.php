@@ -1,6 +1,11 @@
-
+<head>
+<script src="jQuery/jquery-1.12.0.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="bootstrap/bootstrap-confirmation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="Vue/administration/typesCapteurs/typesCapteurs.css">
+</head>
 
 <body>
 <div class = "container-fluid" >
@@ -33,12 +38,22 @@
 </div>
 
 <a href="index.php" class="btn btn-danger pull-right" role="button">Retour</a>
+<button class="btn btn-default" data-toggle="confirmation">Confirmation</button>
+<button class="btn btn-default" data-toggle="confirmation" data-singleton="true">Confirmation 1</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
 
 </div>
 
 </body>
 
 <script>
+
+
+$('[data-toggle=confirmation]').confirmation({
+  rootSelector: '[data-toggle=confirmation]',
+  // other options
+});
 
 function research() {
     var input, filter, found, table, tr, td, i, j;
