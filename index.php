@@ -63,10 +63,16 @@
             include("Vue/non_connecte/non_connecte.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "deleteUser") {
             include ("Modele/Admin/deleteUser.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "createSensorType") {
+            include ("Modele/Admin/createSensorType.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "deleteSensorType") {
+            include ("Modele/Admin/deleteSensorType.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "typesCapteurs") {
             include ("Vue/administration/typesCapteurs/typesCapteurs.php");
           } elseif (isset($_GET['cible']) && $_GET['cible'] == "utilisateurs") {
             include ("Vue/administration/utilisateurs/utilisateurs.php");
+          } elseif (isset($_GET['cible']) && $_GET['cible'] == "creerUser") {
+            include ("Modele/Admin/creerUser.php");
           } elseif (isset($_GET['cible'])) {
             echo('Page non autorisée');
           } else {

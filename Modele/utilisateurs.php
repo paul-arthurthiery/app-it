@@ -29,6 +29,12 @@
      $db->query('INSERT INTO user (User_Id,Username, Password, FullName, IsAdmin)
       VALUES ("'.$UUID.'","'.$identifiant.'", "'.$mdp.'", "'.$fullName.'", 0);');
     }
+    function createUserAdmin($db,$fullName,$identifiant,$mdp,$isAdmin){
+    $UUID = uniqid();
+     $db->query('INSERT INTO user (User_Id,Username, Password, FullName, IsAdmin)
+      VALUES ("'.$UUID.'","'.$identifiant.'", "'.$mdp.'", "'.$fullName.'", "'.$isAdmin.'");');
+    }
+
 
     function checkUserName($db,$identifiant)
     {

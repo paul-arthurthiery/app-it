@@ -75,6 +75,16 @@
            <td>'.$ID.'</td>
            <td>'.$Name.'</td>
            <td>'.$Actuator.'</td>
+           <td>
+           <a id="suprSensorBtn" data-toggle="confirmation" data-singleton="true"
+               href="index.php?cible=deleteSensorType&sensorTypeId='.$ID.'"
+               class="btn btn-danger"
+               data-title="Êtes-vous sûr ?"
+               data-btn-ok-label="Oui"
+               data-btn-cancel-label="Non"
+               role="button">
+               Supprimer '.$Name.'
+           </a></td>
            </tr>');
       }
 

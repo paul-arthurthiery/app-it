@@ -1,7 +1,7 @@
 <?php
 
-   require("connexion.php");
-   
+   require("Modele/connexion.php");
+
     function query3($db,$VAL,$TYP,$NUM){
         $Result_3 = "UPDATE sensor SET Value ='$VAL' WHERE Type = '$TYP' AND NUM = '$NUM' ";
         $Stmt_3 = $db->prepare($Result_3);

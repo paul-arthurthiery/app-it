@@ -56,10 +56,17 @@
       <h2>Ajouter un utilisateur</h2>
     </div>
     <div class="modal-body">
-      <form class="form-signin" method="POST" action="index.php?cible=inscriptionValidation">
+      <form class="form-signin" method="POST" action="index.php?cible=creerUser">
       <input type="text" class="form-control" name="FullName" placeholder="Nom complet" required autofocus>
       <input type="text" class="form-control" name="identifiant" placeholder="Pseudo" required autofocus>
       <input type="password" id="mdp1"class="form-control" name="mdp" placeholder="Mot de passe" required>
+      <div id="radio">
+      Est un admin :
+      <select name="isAdmin">
+      <option value="non">Non</option>
+      <option value="oui">Oui</option>
+      </select>
+    </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit" id="button">
           Ajouter l'utilisateur </button>
     </div>
