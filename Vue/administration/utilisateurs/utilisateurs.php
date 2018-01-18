@@ -9,11 +9,12 @@
 <body>
 <div class = "container-fluid" >
   <h1>Utilisateurs</h1>
+  <button id="myBtn" class="btn btn-success pull-right">Ajouter un utilisateur</button>
+
   <br/>
 
   <input type="text" id="myInput" onkeyup="research()" placeholder="Rechercher un utilisateur" title="Type in a name">
   <!-- Trigger/Open The Modal -->
-  <button id="myBtn" class="btn btn-success pull-right">Ajouter un utilisateur</button>
   <br/>
   <br/>
 
