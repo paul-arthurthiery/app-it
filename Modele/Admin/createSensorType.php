@@ -4,8 +4,11 @@
      $name = $_POST['name'];
 
 
-     if ($_POST['isActuator'] = "oui"){
+     if ($_POST['isActuator'] == "oui"){
        $isActuator = 1;
+     }
+     else {
+       $isActuator = 0;
      }
 
       $db->query('INSERT INTO sensortype (Name,isActuator)
