@@ -3,7 +3,7 @@
 <script src="bootstrap/bootstrap.min.js"></script>
 <script src="bootstrap/bootstrap-confirmation.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<link rel="stylesheet" href="bootstrap/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="Vue/administration/typesCapteurs/typesCapteurs.css">
 </head>
 

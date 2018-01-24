@@ -17,31 +17,40 @@
 
     function meanTemp($sensorsPDO){
       $sensors = $sensorsPDO->fetchAll();
+      if (!$sensors) {return null;}
       $meanTempValue = 0;
       $numberOfLoops = 0;
       foreach ($sensors as $individualSensor){
-        if($individualSensor['Type']==1){
-          $meanTempValue += $individualSensorValue;
-          $numberOfLoops++;
-        }
-      $meanTempValue = $meanTempValue/$numberOfLoops;
+        if($individualSensor['Type'] != 1) {return;}
+        $individualSensorValue = $individualSensor['Value'];
+        $meanTempValue += $individualSensorValue;
+        $numberOfLoops++;
+
       }
+      $meanTempValue = $meanTempValue/$numberOfLoops;
       return $meanTempValue;
     }
 
     function getTempOfRooms($roomArray){
+      require("connexion.php");
+
+      $roomArray = json_decode($roomArray, true);
       $arrayOfTemps = [];
       foreach ($roomArray as $room){
         $roomID = $room['RoomID'];
         $sensorsPDO = getSensors($db, $roomID);
         $meanTemp = meanTemp($sensorsPDO);
+        if($meanTemp){
         array_push($arrayOfTemps, $meanTemp);
+        }
       }
-      return $arrayOfTemps;
+      $jsonArrayOfTemps = json_encode($arrayOfTemps);
+      print_r($jsonArrayOfTemps);
+      return ($jsonArrayOfTemps);
     }
 
     if (isset($_GET["sensorDataRequest"])){
-      return getTempsOfRooms($roomArray);
+      return getTempOfRooms($_GET["roomArray"]);
     }
 
 ?>
