@@ -23,6 +23,7 @@
                 <img class="profile-img" src="Images/Logo_APP.png" height="120" width="120"
                     alt="">
                 <form class="form-signin" method="POST" action="index.php?cible=inscriptionValidation">
+                <input type="text" class="form-control" name="cemac" placeholder="Numéro de série" required autofocus>
                 <input type="text" class="form-control" name="FullName" placeholder="Nom complet" required autofocus>
                 <input type="text" class="form-control" name="identifiant" placeholder="Pseudo" required autofocus>
                 <input type="password" id="mdp1"class="form-control" name="mdp" placeholder="Mot de passe" required>

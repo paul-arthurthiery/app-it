@@ -42,6 +42,12 @@
       return $reponse;
     }
 
+    function checkCemac($db,$cemac)
+    {
+      $reponse = $db->query('SELECT * FROM numSerie WHERE cemac="'.$cemac.'" ');
+      return $reponse;
+    }
+
 
 
 ?>
