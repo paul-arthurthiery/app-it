@@ -48,9 +48,9 @@ if ($testWhosApt)
         $i=0;
         if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1>'; } else {
     	foreach ($roomArray as $room) {
-    		$i++;
 
-        if($i %2  != 0) {
+
+        if($i %3  == 0) {
           $apptBody .= '
             </div>
           <div class="row">';
@@ -58,7 +58,7 @@ if ($testWhosApt)
     		$roomName = $room['Name'];
     		$apptBody .= '
           	<!-- Card Projects -->
-          	<div class="col-md-4">
+          	<div class="col-md-3">
             	<div class="card">
                 <div class="card-image">
                   <img class="img-responsive" src="../Images/sensorBB.svg">
@@ -73,11 +73,13 @@ if ($testWhosApt)
                 </div>
               </div>
           	</div>';
+            $i++;
     	};
 
 
 	}
 	$contenu = $apptBody;
+
 }
 else
 {

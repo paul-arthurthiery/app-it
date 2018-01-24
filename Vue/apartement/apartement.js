@@ -11,4 +11,6 @@ $(document).ready(
     url : "../../Modele/apartement.php",
     data : {"sensorDataRequest" : "true", "$roomArray" : roomArray},
     success : setMeanTemperatures(data);
-  }))
+  });
+  console.log("sensor data git gotten")
+)
