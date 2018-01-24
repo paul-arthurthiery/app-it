@@ -6,7 +6,6 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-      <script src="apartement.js"> </script>
 	</head>
 </html>
 
@@ -35,10 +34,6 @@ if (!isset($_GET['aptID'])){
 
 if ($testWhosApt)
 {
-
-
-
-    	// !isset($_GET['ApptId'] ? $roomArray = getRooms($db, $firstAptID)->fetchAll() : $roomArray = getRooms($db, $_GET['aptID'])->fetchAll();
 
 
         $apptBody = '
@@ -88,4 +83,8 @@ else
 
 include('gabarit.php');
 
+
 ?>
+
+<script type="text/javascript">var roomArray = '<?php echo json_encode($roomArray); ?>';</script>
+<script src="Vue/apartement/apartement.js"> </script>
