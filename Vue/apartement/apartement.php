@@ -39,7 +39,8 @@ if ($testWhosApt)
 
 
         $apptBody = '
-        <h1>Apartement</h1><br>
+        <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-success pull-right" role="button">Ajouter une pièce</a>
+        <h1>Apartement</h1> <br>
         <div class="container">
           <div class="row">';
         $i=0;
