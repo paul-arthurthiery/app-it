@@ -72,12 +72,12 @@ INSERT INTO `numSerie` (`cemac`) VALUES
 
 DROP TABLE IF EXISTS `room`;
 CREATE TABLE IF NOT EXISTS `room` (
-  `RoomID` tinyint(4) NOT NULL,
+  `RoomID` tinyint(4) NOT NULL AUTO_INCREMENT,
   `ApartmentID` int(11) NOT NULL,
   `Name` varchar(50) NOT NULL,
   PRIMARY KEY (`RoomID`),
   KEY `fk_ApartmentID` (`ApartmentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `room`
@@ -98,14 +98,14 @@ INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
 
 DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE IF NOT EXISTS `sensor` (
-  `SensorID` tinyint(4) NOT NULL,
+  `SensorID` tinyint(4) NOT NULL AUTO_INCREMENT ,
   `Type` int(11) NOT NULL,
   `Value` varchar(20) NOT NULL,
   `RoomID` tinyint(4) NOT NULL,
   PRIMARY KEY (`SensorID`),
   KEY `fk_RoomID` (`RoomID`),
   KEY `fk_sensor` (`Type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `sensor`

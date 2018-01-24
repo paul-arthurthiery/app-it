@@ -9,5 +9,5 @@
 
     deleteSensorType($db,$id)
     {
-      $db->query('DELETE FROM sensortype WHERE ID = "'.$id.'" ;
+      $db->query('DELETE FROM sensortype WHERE ID = "'.$id.'";' );
     }

@@ -62,3 +62,7 @@ text-decoration: none;
 #noRooms {
 	text-align: center;
 }
+
+#addButton{
+	max-width: 20%;
+}

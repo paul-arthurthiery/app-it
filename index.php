@@ -26,6 +26,10 @@
                 include("Vue/etape2.php");
             } else if ($_GET['cible'] == "etape3"){
                 include("Vue/etape3.php");
+            } else if ($_GET['cible'] == "postRooms"){
+                  include("Modele/postRooms.php");
+            } else if ($_GET['cible'] == "createRoom"){
+                  include("Vue/createRoom/createRoom.php");
             } else if ($_GET['cible'] == "Myprofile"){
                   include("Vue/Myprofile.php");
             } else if ($_GET['cible'] == "nouscontacter"){

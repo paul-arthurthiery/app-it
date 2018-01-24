@@ -21,7 +21,9 @@ global $testWhosApt;
 if (!isset($_GET['aptID'])){
 	$roomArray = getRooms($db, $firstAptID)->fetchAll();
 	$testWhosApt = true;
+  $currentAptID = $firstAptID;
 } else {
+  $currentAptID = $_GET['aptID'];
 	global $userIDOfApartmentID;
 	$userIDOfApartmentID = getUserIDOfApartmentID($db,$_GET['aptID'])->fetch();
 	if($_SESSION['User_Id']==$userIDOfApartmentID['User_Id']){
@@ -46,7 +48,7 @@ if ($testWhosApt)
         <div class="container">
           <div class="row">';
         $i=0;
-        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1>'; } else {
+        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1> <br/>   <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-success center-block" role="button">Ajouter une pièce</a>'; } else {
     	foreach ($roomArray as $room) {
 
 
