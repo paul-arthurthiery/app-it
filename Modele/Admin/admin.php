@@ -36,7 +36,7 @@
                data-title="Êtes-vous sûr ?"
                data-btn-ok-label="Oui"
                data-btn-cancel-label="Non"
-               role="button">
+               role="button" data-popout="true">
                Supprimer '.$fullName.'
            </a></td>
            </tr>');
@@ -82,7 +82,7 @@
                data-title="Êtes-vous sûr ?"
                data-btn-ok-label="Oui"
                data-btn-cancel-label="Non"
-               role="button">
+               role="button" data-popout="true">
                Supprimer '.$Name.'
            </a></td>
            </tr>');
