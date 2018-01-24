@@ -2,6 +2,11 @@
 <html>
     <head>
     	<link rel="stylesheet" type="text/css" href="Vue/apartement/apartement.css">
+      <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+      <script src="apartement.js"> </script>
 	</head>
 </html>
 
@@ -43,9 +48,9 @@ if ($testWhosApt)
         $i=0;
         if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1>'; } else {
     	foreach ($roomArray as $room) {
-    		$i++;
 
-        if($i %2  != 0) {
+
+        if($i %3  == 0) {
           $apptBody .= '
             </div>
           <div class="row">';
@@ -53,7 +58,7 @@ if ($testWhosApt)
     		$roomName = $room['Name'];
     		$apptBody .= '
           	<!-- Card Projects -->
-          	<div class="col-md-4">
+          	<div class="col-md-3">
             	<div class="card">
                 <div class="card-image">
                   <img class="img-responsive" src="../Images/sensorBB.svg">
@@ -64,15 +69,17 @@ if ($testWhosApt)
                 </div>
 
                 <div class="card-action">
-                  <a href="#" target="new_blank">Sensor Value</a>
+                  <a href="#" target="new_blank" class="sensor-value">Sensor Value loading</a>
                 </div>
               </div>
           	</div>';
+            $i++;
     	};
 
 
 	}
 	$contenu = $apptBody;
+
 }
 else
 {
