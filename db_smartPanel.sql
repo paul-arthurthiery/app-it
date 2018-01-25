@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mer. 24 jan. 2018 à 17:33
+-- Généré le :  jeu. 25 jan. 2018 à 20:53
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -13,6 +13,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `smartpanel`
 --
+DROP DATABASE IF EXISTS `smartpanel`;
 CREATE DATABASE IF NOT EXISTS `smartpanel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `smartpanel`;
 
@@ -77,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `room` (
   `Name` varchar(50) NOT NULL,
   PRIMARY KEY (`RoomID`),
   KEY `fk_ApartmentID` (`ApartmentID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `room`
@@ -88,7 +89,10 @@ INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
 (2, 2, 'Another Room'),
 (3, 2, 'A third room'),
 (4, 2, 'The last room'),
-(8, 3, 'La pièce');
+(8, 3, 'La pièce'),
+(31, 21654, 'testaptalusko'),
+(32, 21654, 'test2'),
+(33, 21654, 'test3');
 
 -- --------------------------------------------------------
 
@@ -98,21 +102,34 @@ INSERT INTO `room` (`RoomID`, `ApartmentID`, `Name`) VALUES
 
 DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE IF NOT EXISTS `sensor` (
-  `SensorID` tinyint(4) NOT NULL AUTO_INCREMENT ,
+  `SensorID` tinyint(4) NOT NULL AUTO_INCREMENT,
   `Type` int(11) NOT NULL,
   `Value` varchar(20) NOT NULL,
   `RoomID` tinyint(4) NOT NULL,
   PRIMARY KEY (`SensorID`),
   KEY `fk_RoomID` (`RoomID`),
   KEY `fk_sensor` (`Type`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `sensor`
 --
 
 INSERT INTO `sensor` (`SensorID`, `Type`, `Value`, `RoomID`) VALUES
-(0, 1, '3', 2);
+(0, 1, '3', 2),
+(16, 1, '20', 31),
+(17, 1, '20', 31),
+(18, 1, '20', 31),
+(19, 1, '20', 32),
+(20, 1, '20', 32),
+(21, 1, '20', 33),
+(22, 1, '20', 33),
+(23, 1, '20', 33),
+(24, 4, '20', 33),
+(25, 1, '20', 33),
+(26, 1, '20', 33),
+(27, 4, '20', 33),
+(28, 1, '20', 33);
 
 -- --------------------------------------------------------
 
