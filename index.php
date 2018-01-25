@@ -24,8 +24,8 @@
                 include("Vue/etape1.php");
             } else if ($_GET['cible'] == "etape2"){
                 include("Vue/etape2.php");
-            } else if ($_GET['cible'] == "etape3"){
-                include("Vue/etape3.php");
+            } else if ($_GET['cible'] == "sensorPage"){
+                include("Vue/sensorPage/sensorPage.php");
             } else if ($_GET['cible'] == "postRooms"){
                   include("Modele/postRooms.php");
             } else if ($_GET['cible'] == "createRoom"){

@@ -3,9 +3,7 @@
     <head>
     	<link rel="stylesheet" type="text/css" href="Vue/apartement/apartement.css">
       <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  src="jQuery/jquery-3.2.1.min.js"></script>
 	</head>
 </html>
 
@@ -39,12 +37,12 @@ if ($testWhosApt)
 
 
         $apptBody = '
-        <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-success pull-right" role="button">Ajouter une pièce</a>
+        <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-primary pull-right" role="button">Ajouter une pièce</a>
         <h1>Apartement</h1> <br>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">';
         $i=0;
-        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1> <br/>   <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-success center-block" role="button">Ajouter une pièce</a>'; } else {
+        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1> <br/>   <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-primary center-block" role="button">Ajouter une pièce</a>'; } else {
     	foreach ($roomArray as $room) {
 
 
@@ -54,12 +52,15 @@ if ($testWhosApt)
           <div class="row">';
         }
     		$roomName = $room['Name'];
+        $roomID = $room['RoomID'];
     		$apptBody .= '
           	<!-- Card Projects -->
-          	<div class="col-md-3">
+          	<div class="col-md-4">
             	<div class="card">
                 <div class="card-image">
-                  <img class="img-responsive" src="Images/sensorBB.svg">
+                  <a href="index.php?cible=sensorPage&aptID='.$currentAptID.'&roomID='.$roomID.'">
+                  <img class="img-responsive" src="Images/blueroom.svg">
+                  </a>
                 </div>
 
                 <div class="card-content">
