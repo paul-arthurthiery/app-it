@@ -33,7 +33,9 @@
             <!-- div contenant la sidebar -->
             <nav id="sidebar">
                 <div class="sidebar-header">
+                  <a href="index.php?cible=apt">
                     <img src = "Images/Logo_APP.png" height="100" width="100" style="display : block; margin : auto">
+                  </a>
                 </div>
 
                 <ul class="list-unstyled components">

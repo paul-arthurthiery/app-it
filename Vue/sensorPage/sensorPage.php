@@ -43,7 +43,7 @@ if ($testWhosRoom)
     	foreach ($sensorArray as $sensor) {
 
 
-        if($i %3  == 0) {
+        if($i %4  == 0) {
           $roomBody .= '
             </div>
           <div class="row">';
@@ -51,7 +51,7 @@ if ($testWhosRoom)
     		$SensorName = getSensorName($db,$sensor['Type'])->fetch()[0];
     		$roomBody .= '
           	<!-- Card Projects -->
-          	<div class="col-md-4">
+          	<div class="col-md-3">
             	<div class="card">
                 <div class="card-image">
                   <img class="img-responsive" src="Images/sensorPlaceHolder.svg">

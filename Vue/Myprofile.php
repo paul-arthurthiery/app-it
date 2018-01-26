@@ -29,7 +29,7 @@ $contenu = '
 		     <div class="form-group">
 		       <label for="usr">Nom et Prénom:</label>
 		       <input type="text" class="form-control" name="Nom" value="'.$data_1.'"readonly="true">
-		     </div>		 
+		     </div>
 		       <div class="form-group">
 		       <label for="usr">Password:</label>
 		       <input type="password" class="form-control" name="password" value="'.$data_3.'" readonly="true">
@@ -50,7 +50,7 @@ $contenu = '
 <hr/>
 
   <a href="index.php?cible=Gérer"><button type="button" class="btn btn-primary">Modifier</button>
-	<a href="index.php"><button type="button" class="btn btn-primary">Retour</button>
+	<a href="index.php?cible=apt"><button type="button" class="btn btn-primary">Retour</button>
 
 
 </body>
