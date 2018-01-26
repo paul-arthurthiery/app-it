@@ -22,8 +22,8 @@
                 include("Modele/utilisateurs.php");
                 $reponse = utilisateurs($db);
                 include("Vue/etape1.php");
-            } else if ($_GET['cible'] == "etape2"){
-                include("Vue/etape2.php");
+            } else if ($_GET['cible'] == "addSensor"){
+                include("Vue/addSensor/addSensor.php");
             } else if ($_GET['cible'] == "sensorPage"){
                 include("Vue/sensorPage/sensorPage.php");
             } else if ($_GET['cible'] == "postRooms"){

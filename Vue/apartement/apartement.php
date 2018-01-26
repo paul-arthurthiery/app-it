@@ -38,11 +38,11 @@ if ($testWhosApt)
 
         $apptBody = '
         <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-primary pull-right" role="button">Ajouter une pièce</a>
-        <h1>Apartement</h1> <br>
+        <h1>Appartement</h1> <br>
         <div class="container-fluid">
           <div class="row">';
         $i=0;
-        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet apartement</h1> <br/>   <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-primary center-block" role="button">Ajouter une pièce</a>'; } else {
+        if(sizeof($roomArray)==0) { $apptBody = '<h1 id="noRooms">Pas de pièce dans cet appartement</h1> <br/>   <a id="addButton" href="index.php?cible=createRoom&aptID='.$currentAptID.'" class="btn btn-primary center-block" role="button">Ajouter une pièce</a>'; } else {
     	foreach ($roomArray as $room) {
 
 

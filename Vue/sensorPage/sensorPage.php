@@ -33,6 +33,7 @@ if ($testWhosRoom)
 
 
         $roomBody = '
+        <a id="addButton" href="index.php?cible=addSensor&aptID='.$currentAptID.'&roomID='.$_GET['roomID'].'" class="btn btn-primary pull-right" role="button">Ajouter un capteur</a>
         <h1>Capteurs</h1> <br>
         <a id="returnButton" href="index.php?cible=apt&aptID='.$_GET['aptID'].'" class="btn btn-danger pull-right" role="button" data-spy="affix">Retour</a>
         <div class="container-fluid">
