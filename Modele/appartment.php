@@ -21,7 +21,9 @@
       $meanTempValue = 0;
       $numberOfLoops = 0;
       foreach ($sensors as $individualSensor){
-        if($individualSensor['Type'] != 1) {return;}
+        if($individualSensor['Type'] != 1) {
+          break;
+        }
         $individualSensorValue = $individualSensor['Value'];
         $meanTempValue += $individualSensorValue;
         $numberOfLoops++;
@@ -33,7 +35,6 @@
 
     function getTempOfRooms($roomArray){
       require("connexion.php");
-
       $roomArray = json_decode($roomArray, true);
       $arrayOfTemps = [];
       foreach ($roomArray as $room){
