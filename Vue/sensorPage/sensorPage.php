@@ -35,7 +35,17 @@ if ($testWhosRoom)
 
 
         $roomBody = '
-        <a id="addButton" href="index.php?cible=addSensor&aptID='.$currentAptID.'&roomID='.$_GET['roomID'].'" class="btn btn-primary pull-right" role="button">Ajouter un capteur</a>
+        <span id="addSensor" class="pull-right">
+        <form action="index.php?cible=addSensor&aptID='.$currentAptID.'&roomID='.$_GET['roomID'].'" method="post">
+
+        <span id = "dropdown">
+        <select name="type"/>
+        '.$menu.'
+        </select>
+        </span>
+        <input type="submit" name="save" value="Ajouter un capteur"/>
+        </form>
+        </span>
         <h1>Capteurs</h1> <br>
         <a id="returnButton" href="index.php?cible=apt&aptID='.$_GET['aptID'].'" class="btn btn-danger pull-right" role="button" data-spy="affix">Retour</a>
         <div class="container-fluid">
@@ -71,22 +81,6 @@ if ($testWhosRoom)
             ';
             $i++;
     	};
-      $roomBody .= '
-      </div>
-      <div id="addSensorMenu">
-      <br/>
-      <form action="index.php?cible=addSensor&aptID='.$currentAptID.'&roomID='.$_GET['roomID'].'" method="post">
-
-      <span id = "dropdown">
-      <select name="type"/>
-      '.$menu.'
-      </select>
-      </span>
-      <input type="submit" name="save" value="Ajouter un capteur"/>
-      </form>
-      </div>
-
-      ';
 
 	}
 	$contenu = $roomBody;
