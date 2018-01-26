@@ -10,7 +10,7 @@
 
 		} else {
 			$erreur = '<p>Veuillez remplir tous les champs</p>';
-			include("Vue/create_appartment.php");
+			include("Vue/create_appartment/create_appartment.php");
 		}
 	}
 

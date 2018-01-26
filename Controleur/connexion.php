@@ -27,7 +27,7 @@
                   $reponse_appt = appt($db,$_SESSION['User_Id']);
                     if($reponse_appt->rowcount()==0) {
 
-                      include("Vue/create_appartment.php");
+                      include("Vue/create_appartment/create_appartment.php");
                       }
                     else {
                       include("Modele/statutAdministrateur.php");
