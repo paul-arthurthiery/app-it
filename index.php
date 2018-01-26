@@ -23,7 +23,7 @@
                 $reponse = utilisateurs($db);
                 include("Vue/etape1.php");
             } else if ($_GET['cible'] == "addSensor"){
-                include("Vue/addSensor/addSensor.php");
+                include("Modele/addOneSensor.php");
             } else if ($_GET['cible'] == "sensorPage"){
                 include("Vue/sensorPage/sensorPage.php");
             } else if ($_GET['cible'] == "postRooms"){

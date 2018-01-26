@@ -9,8 +9,10 @@
 
 <?php
 // include 'Modele/menu.php';
-include 'Modele/appartment.php';
-include 'Modele/sensors.php';
+include('Modele/appartment.php');
+include('Modele/sensors.php');
+include("Modele/addSensors.php");
+$menu =  genMenuSensor();
 
 $firstAptID = GetAppt($db, $_SESSION['User_Id'])->fetchAll()[0]['ApptId'];
 global $testWhosRoom;
@@ -69,7 +71,22 @@ if ($testWhosRoom)
             ';
             $i++;
     	};
+      $roomBody .= '
+      </div>
+      <div id="addSensorMenu">
+      <br/>
+      <form action="index.php?cible=addSensor&aptID='.$currentAptID.'&roomID='.$_GET['roomID'].'" method="post">
 
+      <span id = "dropdown">
+      <select name="type"/>
+      '.$menu.'
+      </select>
+      </span>
+      <input type="submit" name="save" value="Ajouter un capteur"/>
+      </form>
+      </div>
+
+      ';
 
 	}
 	$contenu = $roomBody;

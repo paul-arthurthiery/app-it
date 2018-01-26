@@ -77,3 +77,7 @@ right: 10px;
 position: relative;
 z-index: 999;
 }
+
+#addSensorMenu{
+text-align: center;
+}
