@@ -26,7 +26,7 @@ $contenu = '
     </select>
 
     <label for="subject">Contenu</label>
-    <textarea id="subject" name="subject" placeholder="Quel est votre probleme.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Quel est votre problème.." style="height:200px"></textarea>
     <input type="submit" value="Soumettre" name="submit">
      </form>
 

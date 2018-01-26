@@ -10,7 +10,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #5bc0de;
+    background-color: #2980b9;
     color: white;
     padding: 12px 20px;
     border: none;
