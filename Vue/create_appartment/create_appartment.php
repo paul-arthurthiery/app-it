@@ -11,6 +11,8 @@
 		  src="jQuery/jquery-3.2.1.min.js"
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		  crossorigin="anonymous"></script>
+			<script src="Vue/create_appartment/create_appartment.js"> </script>
+
 
 
 		<title>Create Appartment page</title>
@@ -24,7 +26,7 @@
 					<div class="form-group">
 						<label for="name" class="control-label col-sm-5">Nom: </label>
 						<div class="col-sm-6">
-							<input type="text" name="name">
+							<input type="text" name="name" maxlength="20">
 						</div>
 					</div>
 					<br>
