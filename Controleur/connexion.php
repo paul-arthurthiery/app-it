@@ -25,13 +25,13 @@
 
                   $_SESSION['User_Id'] = $UID['User_Id'];
                   $reponse_appt = appt($db,$_SESSION['User_Id']);
-                    if($reponse_appt->rowcount()==0) {
+                  include("Modele/statutAdministrateur.php");
+                  $estAdministrateur = estAdministrateur($db, $UID['User_Id'])['IsAdmin'];
+                    if($reponse_appt->rowcount()==0 && $estAdministrateur ==0) {
 
                       include("Vue/create_appartment/create_appartment.php");
                       }
                     else {
-                      include("Modele/statutAdministrateur.php");
-                      $estAdministrateur = estAdministrateur($db, $UID['User_Id'])['IsAdmin'];
                       if ($estAdministrateur == 0) {
                         include("Vue/apartement/apartement.php");
                       } elseif ($estAdministrateur == 1) {
