@@ -22,7 +22,7 @@
       $numberOfLoops = 0;
       foreach ($sensors as $individualSensor){
         if($individualSensor['Type'] != 1) {
-          break;
+          continue;
         }
         $individualSensorValue = $individualSensor['Value'];
         $meanTempValue += $individualSensorValue;
