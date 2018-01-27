@@ -5,6 +5,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="Vue/administration/typesCapteurs/typesCapteurs.css">
+<script src="Vue/administration/typesCapteurs/typesCapteurs.js"></script>
 </head>
 
 <body>
