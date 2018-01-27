@@ -31,11 +31,11 @@ $contenu = '
 		       <input type="text" class="form-control" name="Nom" value="'.$data_1.'"readonly="true">
 		     </div>
 		       <div class="form-group">
-		       <label for="usr">Password:</label>
+		       <label for="usr">Mot de passe :</label>
 		       <input type="password" class="form-control" name="password" value="'.$data_3.'" readonly="true">
 		     </div>
 			  <div class="form-group">
-		       <label for="usr">Address:</label>
+		       <label for="usr">Adresse :</label>
 		       <input type="text" class="form-control" name="Post" value="'.$data_4.'" readonly="true">
 		     </div>
 
