@@ -30,7 +30,7 @@
 
       }
       $meanTempValue = $meanTempValue/$numberOfLoops;
-      return $meanTempValue;
+      return number_format($meanTempValue, ((int) $meanTempValue == $meanTempValue ? 0 : 2));
     }
 
     function getTempOfRooms($roomArray){
