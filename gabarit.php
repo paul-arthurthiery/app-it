@@ -3,20 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>
            SmartPanel
         </title>
-        <style type="text/css">
-        ul li {list-style-type: none; }
-        .nav li{ line-height:20px; float:left; padding:0 5px; font-size: 23px;}
-        .nav ul li a {display: block; width: 100%; background: #FFF}
-        .nav li a:hover{ color:#F00}
-        .ul{ padding:0; margin:0;list-style:none}
-        .bg{margin: 25px; margin-bottom: 0px;}
-
-        </style>
+      
 
         <!-- Bootstrap CSS  -->
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">

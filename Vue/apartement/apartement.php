@@ -68,7 +68,7 @@ if ($testWhosApt)
                 </div>
 
                 <div class="card-action">
-                  <a href="#" target="new_blank" class="sensor-value">Sensor Value loading</a>
+                  <a href="#" target="new_blank" class="sensor-value">Chargement des capteurs ...</a>
                 </div>
               </div>
           	</div>';

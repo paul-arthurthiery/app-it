@@ -4,12 +4,12 @@ function setMeanTemperatures(tempArray){
   let properArray = JSON.parse(tempArray);
   var pointer = $("a.sensor-value");
   for (temperature of properArray){
-    $(pointer.get(i)).text("Average temparture is " + temperature);
+    $(pointer.get(i)).text("Température moyenne : " + temperature);
     i++;
   };
 
   while ( pointer.get(i) != null) {
-    $(pointer.get(i)).text("No temperature data to display");
+    $(pointer.get(i)).text("Aucune valeur à afficher");
     i++;
   }
   console.log("all done");
