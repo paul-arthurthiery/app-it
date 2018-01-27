@@ -3,6 +3,8 @@ include("Modele/utilisateurs.php");
 
 $response = checkUserName($db,$_POST['identifiant']);
 
+$isAdmin = 0;
+
 if ($_POST['isAdmin'] == "oui"){
   $isAdmin = 1;
 }
