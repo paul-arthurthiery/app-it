@@ -29,7 +29,7 @@ $contenu = '
 		     </div>
 		       <div class="form-group">
 		       <label for="Password">Password:</label>
-		       <input type="password" class="form-control" name="Password" value="'.$data_3.'">
+		       <input type="password" class="form-control" name="Password">
 		     </div>
 		       <div class="form-group">
 		       <label for="Password">Confirmer Password:</label>
@@ -40,10 +40,10 @@ $contenu = '
 		       <input type="text" class="form-control" name="Address" value="'.$data_4.'">
 		     </div>
 		     <div class="form-group">
-              <a href="index.php"><button type="submit" class="btn btn-primary" name="modi">Confirmer</button></a>  
-              <a href="index.php?cible=Myprofile"><button type="button" class="btn btn-primary">Retour</button></a>  
-             </div>  
-				
+              <a href="index.php"><button type="submit" class="btn btn-primary" name="modi">Confirmer</button></a>
+              <a href="index.php?cible=Myprofile"><button type="button" class="btn btn-primary">Retour</button></a>
+             </div>
+
 
 		   </form>
 		   <?php if (!empty($erreur)) {
@@ -54,7 +54,7 @@ $contenu = '
 		</div>
 	</div>
     <hr/>
-    
+
 
 
 
@@ -71,11 +71,8 @@ $contenu = '
 ';
 
 
-   
+
 
 include('gabarit.php')
 
 ?>
-
-
-  
