@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `sensortype` (
   `Name` varchar(20) NOT NULL,
   `IsActuator` tinyint(4) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 INSERT INTO `sensortype` (`ID`, `Name`, `IsActuator`) VALUES
 (1, 'Thermomètre', 0),
